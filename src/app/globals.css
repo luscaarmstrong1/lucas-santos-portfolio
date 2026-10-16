@@ -813,23 +813,32 @@ html, body {
 .sequence-final-strawberry {
   z-index: 1 !important;
   pointer-events: none !important;
-  opacity: 0.8 !important;
+  opacity: 0.95 !important;
+  filter: drop-shadow(0 1.2em 2.5em rgba(7, 24, 39, 0.45));
 }
 .sequence-final-cookie {
-  bottom: 2em !important;
-  left: 3% !important;
+  width: 9em !important;
+  height: 9em !important;
+  bottom: 2.5em !important;
+  left: 4% !important;
 }
 .sequence-final-cookie.is-second {
-  bottom: 24em !important;
-  left: 1% !important;
+  width: 13.5em !important;
+  height: 13.5em !important;
+  bottom: 22em !important;
+  left: 3% !important;
 }
 .sequence-final-strawberry {
-  bottom: 2em !important;
-  right: 3% !important;
+  width: 9em !important;
+  height: 9em !important;
+  bottom: 2.5em !important;
+  right: 4% !important;
 }
 .sequence-final-strawberry.is-second {
-  bottom: 24em !important;
-  right: 1% !important;
+  width: 13.5em !important;
+  height: 13.5em !important;
+  bottom: 22em !important;
+  right: 3% !important;
 }
 
 /* 7. Gráficos Técnicos e Mockups Perfeitamente Alinhados (Sem rotações invertidas) */
