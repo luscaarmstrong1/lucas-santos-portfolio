@@ -84,13 +84,10 @@ export function About() {
                 Sou engenheiro eletricista, pós-graduado em Energia Solar Fotovoltaica e especializando em Ciência de Dados e Inteligência Artificial.
               </h3>
               <p className="paragraph">
-                Ao longo da minha trajetória, atuei na interface entre engenharia elétrica, geração distribuída, regulação técnica, análise de viabilidade e gestão de projetos, conduzindo desde estudos complexos de conexão até a estruturação de processos e operações.
+                Ao longo da minha trajetória na interface entre engenharia elétrica, geração distribuída e regulação técnica, conduzi desde estudos de viabilidade e conexão até a estruturação de processos e gestão de projetos.
               </p>
               <p className="paragraph">
-                Essa vivência prática despertou uma visão clara: grandes desafios técnicos exigem tanto domínio de engenharia quanto capacidade de transformar dados em decisão, automatizar fluxos e construir ferramentas digitais eficientes.
-              </p>
-              <p className="paragraph">
-                Hoje, desenvolvo soluções que unem sistemas de energia, inteligência analítica, Python, automação e aplicações web para gerar eficiência, previsibilidade e impacto real.
+                Essa vivência consolidou meu propósito: unir engenharia de energia, inteligência analítica, Python e automação para criar ferramentas digitais que transformam dados em decisão, gerando eficiência, previsibilidade e impacto real.
               </p>
               <div className="insider-cta">
                 <a
