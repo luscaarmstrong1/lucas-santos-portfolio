@@ -311,7 +311,7 @@ export function Effects() {
         const fruitsTl = gsap.timeline({ paused: true });
 
         gsap.to(platoImg, {
-          rotate: 540,
+          rotate: 360,
           ease: "none",
           scrollTrigger: {
             trigger,
@@ -544,7 +544,7 @@ export function Effects() {
 
       mm.add("(max-width: 991px)", () => {
         gsap.to(platoImg, {
-          rotate: 540,
+          rotate: 360,
           ease: "none",
           scrollTrigger: {
             trigger,
