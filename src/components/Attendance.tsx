@@ -123,13 +123,13 @@ export function Attendance({ mobile = false }: { mobile?: boolean }) {
             transform="rotate(5 165 62.5)"
             fill="currentColor"
             style={{ fontFamily: "var(--font-mao)" }}
-            fontSize={44}
+            fontSize={40}
           >
             <text x={0} y={49}>
-              dados, IA &amp;
+              automação &amp;
             </text>
             <text x={18} y={102}>
-              produtos digitais
+              sistemas inteligentes
             </text>
           </g>
         </svg>
@@ -145,13 +145,13 @@ export function Attendance({ mobile = false }: { mobile?: boolean }) {
             transform="rotate(5 165 62.5)"
             fill="currentColor"
             style={{ fontFamily: "var(--font-mao)" }}
-            fontSize={44}
+            fontSize={40}
           >
             <text x={0} y={49}>
-              dados, IA &amp;
+              automação &amp;
             </text>
             <text x={18} y={102}>
-              produtos digitais
+              sistemas inteligentes
             </text>
           </g>
         </svg>

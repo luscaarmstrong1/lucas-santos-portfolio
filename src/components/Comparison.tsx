@@ -91,6 +91,30 @@ export function Comparison() {
               <br />
               É preciso conectar as soluções.
             </h2>
+
+            <div className="methodology-stages-bar" aria-label="Processo metodológico em 4 etapas">
+              <div className="methodology-stage-pill">
+                <span className="stage-num">01</span>
+                <strong>Diagnóstico</strong>
+                <p>Levantamento regulatório e técnico</p>
+              </div>
+              <div className="methodology-stage-pill">
+                <span className="stage-num">02</span>
+                <strong>Modelagem</strong>
+                <p>Simulação analítica e viabilidade</p>
+              </div>
+              <div className="methodology-stage-pill">
+                <span className="stage-num">03</span>
+                <strong>Implementação</strong>
+                <p>Engenharia executiva e automação</p>
+              </div>
+              <div className="methodology-stage-pill">
+                <span className="stage-num">04</span>
+                <strong>Validação</strong>
+                <p>Conformidade e entrega contínua</p>
+              </div>
+            </div>
+
             <div
               data-benefit-table=""
               className="benefit-table"
