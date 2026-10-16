@@ -2,7 +2,12 @@ import React from "react";
 
 export function Marquee() {
   return (
-    <div data-marquee="" className="marquee" aria-hidden="true">
+    <div
+      data-marquee=""
+      className="marquee"
+      title="Passe o mouse para circular o texto"
+      style={{ cursor: "pointer" }}
+    >
       <div className="marquee-inner">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +16,7 @@ export function Marquee() {
           width="100%"
           style={{ overflow: "visible" }}
           className="marquee-bg-svg"
+          aria-hidden="true"
         >
           <path
             stroke="currentColor"
@@ -37,7 +43,7 @@ export function Marquee() {
               href="#curve"
               startOffset="-30%"
             >
-              Engenharia · Inteligência · Automação · Resultados · Engenharia · Inteligência · Automação · Resultados
+              Engenharia • Inteligência • Automação • Resultados • Engenharia • Inteligência • Automação • Resultados • Engenharia • Inteligência • Automação • Resultados • Engenharia • Inteligência • Automação • Resultados •
             </textPath>
           </text>
         </svg>

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: `${SITE.url}/og.jpg`,
         width: 1200,
         height: 630,
-        alt: "Lucas Silva Santos — Engenheiro Eletricista, Gerente de Projetos, Energia, Dados & Automação",
+        alt: "Lucas Silva Santos | Engenheiro Eletricista, Gerente de Projetos, Energia, Dados & Automação",
       },
     ],
     type: "website",

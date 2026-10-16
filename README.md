@@ -1,4 +1,4 @@
-# Lucas Silva Santos — Portfólio de Engenharia, Energia & Inteligência Aplicada
+# Lucas Silva Santos | Portfólio de Engenharia, Energia & Inteligência Aplicada
 
 <p align="center">
   <img src="public/assets/images/lucas-about.webp" alt="Lucas Silva Santos" width="220" style="border-radius: 50%; border: 3px solid #D3A15C;" />
@@ -24,12 +24,12 @@ A experiência conecta o rigor técnico da engenharia elétrica e da energia sol
 
 ### 🎯 Formação Acadêmica
 
-- **Graduação em Engenharia Elétrica** — FEPI (Centro Universitário de Itajubá)
+- **Graduação em Engenharia Elétrica** : FEPI (Centro Universitário de Itajubá)
   - TCC em dispositivo de medição inteligente IoT para sistemas fotovoltaicos.
   - Iniciação científica em automação com Controladores Lógicos Programáveis (CLP).
-- **Pós-graduação em Energia Solar Fotovoltaica** — UNINTER
+- **Pós-graduação em Energia Solar Fotovoltaica** : UNINTER
   - Especialista em sistemas fotovoltaicos, geração distribuída (GD/MMGD), subestações BT/MT e proteção.
-- **Pós-graduação em Ciência de Dados e Inteligência Artificial** — UNINTER *(Em andamento)*
+- **Pós-graduação em Ciência de Dados e Inteligência Artificial** : UNINTER *(Em andamento)*
   - Aprendizado de máquina, modelagem analítica, simulações computacionais e automação de pipelines.
 
 ---

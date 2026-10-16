@@ -25,11 +25,11 @@ export function About() {
           >
             <div
               id="w-node-_93a09ee3-b180-b755-d23e-d7d2b5f676da-0ac01850"
-              className="testimonial-wrapper"
+              className="testimonial-wrapper cards-deck"
             >
               <div
                 data-inertia-item=""
-                className="testimonial-inner-wrap is-first"
+                className="testimonial-inner-wrap is-first deck-card"
               >
                 <div data-inertia-item-child="" className="testimonial-inner _1">
                   <img
@@ -45,14 +45,13 @@ export function About() {
               </div>
               <div
                 data-inertia-item=""
-                id="w-node-_72dd306a-13a2-73bb-8c1c-84b760924bbc-0ac01850"
-                className="testimonial-inner-wrap is-second"
+                className="testimonial-inner-wrap is-second deck-card"
               >
                 <div data-inertia-item-child="" className="testimonial-inner _2">
                   <img
                     className="testimonial-img"
                     src="/assets/images/lucas-about.webp"
-                    alt="Lucas Silva Santos — Engenheiro Eletricista"
+                    alt="Lucas Silva Santos, Engenheiro Eletricista"
                     loading="lazy"
                   />
                   <div className="testimonial-text-inner">
@@ -62,8 +61,7 @@ export function About() {
               </div>
               <div
                 data-inertia-item=""
-                id="w-node-_4a36f3f0-5bbd-c32e-0ae6-c281e3e49136-0ac01850"
-                className="testimonial-inner-wrap is-third"
+                className="testimonial-inner-wrap is-third deck-card"
               >
                 <div data-inertia-item-child="" className="testimonial-inner _3">
                   <img
@@ -86,7 +84,7 @@ export function About() {
                 Sou engenheiro eletricista, pós-graduado em Energia Solar Fotovoltaica e especializando em Ciência de Dados e Inteligência Artificial.
               </h3>
               <p className="paragraph">
-                Ao longo da minha trajetória, atuei na interface entre engenharia elétrica, geração distribuída, regulação técnica, análise de viabilidade e gestão de projetos — conduzindo desde estudos complexos de conexão até a estruturação de processos e operações.
+                Ao longo da minha trajetória, atuei na interface entre engenharia elétrica, geração distribuída, regulação técnica, análise de viabilidade e gestão de projetos, conduzindo desde estudos complexos de conexão até a estruturação de processos e operações.
               </p>
               <p className="paragraph">
                 Essa vivência prática despertou uma visão clara: grandes desafios técnicos exigem tanto domínio de engenharia quanto capacidade de transformar dados em decisão, automatizar fluxos e construir ferramentas digitais eficientes.

@@ -506,42 +506,121 @@ html, body {
   pointer-events: auto !important;
 }
 
-/* 3. Seção Sobre Mim: Polaroids Elegantes sem Sobreposição ou Oclusão */
-.testimonial-inner-wrap.is-first {
-  position: relative !important;
-  top: 1.5em !important;
-  left: 0 !important;
-  rotate: -1.5deg !important;
-  z-index: 1 !important;
-}
-.testimonial-inner-wrap.is-second {
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-  rotate: 0deg !important;
-  z-index: 3 !important;
-  box-shadow: 0 1.25em 3.5em rgba(7, 24, 39, 0.35) !important;
-}
-.testimonial-inner-wrap.is-third {
-  position: relative !important;
-  top: 1.5em !important;
-  left: 0 !important;
-  right: auto !important;
-  margin-left: 0 !important;
-  rotate: 1.5deg !important;
-  z-index: 1 !important;
-}
-.testimonial-wrapper {
+/* 3. Seção Sobre Mim: Deck de Cards Sobrepostos com Destaque no Hover */
+.testimonial-wrapper.cards-deck {
   display: flex !important;
   flex-direction: row !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 1.5em !important;
-  padding-top: 1.5em !important;
-  flex-wrap: wrap !important;
+  position: relative !important;
+  padding: 3em 1em 2em !important;
+  gap: 0 !important;
 }
-.testimonial-inner {
-  max-width: 22em !important;
+
+.deck-card {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.45s ease,
+              z-index 0.2s ease,
+              filter 0.35s ease,
+              opacity 0.35s ease !important;
+  cursor: pointer !important;
+  width: 17.5em !important;
+  margin: 0 -3.2em !important; /* Efeito sobreposto */
+}
+
+.deck-card.is-first {
+  transform: rotate(-6deg) translateY(14px);
+  z-index: 1 !important;
+}
+
+.deck-card.is-second {
+  transform: rotate(0deg) translateY(-6px);
+  z-index: 3 !important;
+  box-shadow: 0 1.25em 3.5em rgba(7, 24, 39, 0.32) !important;
+}
+
+.deck-card.is-third {
+  transform: rotate(6deg) translateY(14px);
+  z-index: 2 !important;
+}
+
+/* Quando o usuário passa o mouse na área do deck, os outros cards atenuam suavemente */
+.cards-deck:hover .deck-card:not(:hover) {
+  opacity: 0.8;
+  filter: brightness(0.92);
+}
+
+/* O card com mouse em cima ganha destaque absoluto: sobe para z-index 20, desentorta e amplia */
+.cards-deck .deck-card:hover {
+  opacity: 1 !important;
+  filter: none !important;
+  z-index: 20 !important;
+  transform: scale(1.09) translateY(-24px) rotate(0deg) !important;
+  box-shadow: 0 2.2em 5em rgba(7, 24, 39, 0.5), 0 0 0 2px var(--color-gold-accent) !important;
+}
+
+.deck-card .testimonial-inner {
+  width: 100% !important;
+  box-shadow: inherit !important;
+  border-radius: 0.6em !important;
+  overflow: hidden !important;
+  background-color: var(--white) !important;
+}
+
+.deck-card .testimonial-img {
+  width: 100% !important;
+  aspect-ratio: 4 / 4.8 !important;
+  object-fit: cover !important;
+  border-radius: 0.4em !important;
+}
+
+/* Hero Fact Badges - 4 balões distribuídos elegantemente ao longo do arco */
+.stage-fact.is-first {
+  top: 1% !important;
+  left: 27% !important;
+  z-index: 4 !important;
+}
+.stage-fact.is-second {
+  top: 11% !important;
+  left: 12% !important;
+  z-index: 3 !important;
+}
+.stage-fact.is-third {
+  top: 24% !important;
+  left: 2% !important;
+  z-index: 2 !important;
+}
+.stage-fact.is-fourth {
+  top: 39% !important;
+  left: -2% !important;
+  z-index: 1 !important;
+}
+@media screen and (max-width: 991px) {
+  .stage-fact.is-first {
+    top: auto !important;
+    bottom: 2% !important;
+    left: 70% !important;
+  }
+  .stage-fact.is-second {
+    top: auto !important;
+    bottom: 0% !important;
+    left: 45% !important;
+  }
+  .stage-fact.is-third {
+    top: auto !important;
+    bottom: -3% !important;
+    left: 20% !important;
+  }
+  .stage-fact.is-fourth {
+    top: auto !important;
+    bottom: -5% !important;
+    left: 0% !important;
+  }
 }
 
 /* 4. Encurtamento do Vão entre Formação e Sequência */
@@ -637,20 +716,30 @@ html, body {
   .experience-heading {
     font-size: 4em;
   }
-  .testimonial-wrapper {
+  .testimonial-wrapper.cards-deck {
+    flex-direction: row !important;
+    gap: 0 !important;
+    padding-top: 2.5em !important;
+  }
+  .deck-card {
+    width: 16em !important;
+    margin: 0 -2.8em !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .testimonial-wrapper.cards-deck {
     flex-direction: column !important;
     gap: 1.5em !important;
+    margin: 0 auto !important;
     padding-top: 1em !important;
   }
-  .testimonial-inner-wrap.is-first,
-  .testimonial-inner-wrap.is-second,
-  .testimonial-inner-wrap.is-third {
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
+  .deck-card {
+    width: 20em !important;
     margin: 0 auto !important;
-    rotate: 0deg !important;
-    display: block !important;
+    transform: none !important;
+  }
+  .cards-deck .deck-card:hover {
+    transform: scale(1.04) translateY(-8px) !important;
   }
 }
 @media screen and (max-width: 767px) {

@@ -25,7 +25,7 @@ export function FinalCTA() {
         <ActionButton label="Entrar em contato" variant="light" asDiv />
       </div>
       <a
-        aria-label="Entrar em contato — Iniciar briefing de projeto"
+        aria-label="Entrar em contato: Iniciar briefing de projeto"
         href={SITE.contato}
         className="footer-product-link w-inline-block"
       />

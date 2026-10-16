@@ -129,7 +129,7 @@ export function Hero() {
                     data-load-stage-canvas=""
                     className="stage-canvas"
                     src="/assets/images/lucas-hero.webp"
-                    alt="Lucas Silva Santos — Engenheiro Eletricista e Gerente de Projetos"
+                    alt="Lucas Silva Santos | Engenheiro Eletricista e Gerente de Projetos"
                     width={1100}
                     height={1280}
                   />
@@ -142,6 +142,19 @@ export function Hero() {
                       className="stage-fact is-first"
                     >
                       <div className="stage-fact-wrap">
+                        <div className="stage-fact-number">7</div>
+                        <div className="stage-fact-unit">+</div>
+                      </div>
+                      <div className="stage-fact-text">anos de experiência</div>
+                    </div>
+                  </div>
+                  <div data-inertia-item="" className="stage-fact-outer">
+                    <div
+                      data-load-stage-fact=""
+                      data-inertia-item-child=""
+                      className="stage-fact is-second"
+                    >
+                      <div className="stage-fact-wrap">
                         <div className="stage-fact-number">100</div>
                         <div className="stage-fact-unit">+</div>
                       </div>
@@ -152,7 +165,7 @@ export function Hero() {
                     <div
                       data-load-stage-fact=""
                       data-inertia-item-child=""
-                      className="stage-fact is-second"
+                      className="stage-fact is-third"
                     >
                       <div className="stage-fact-wrap">
                         <div className="stage-fact-number">500</div>
@@ -165,7 +178,7 @@ export function Hero() {
                     <div
                       data-load-stage-fact=""
                       data-inertia-item-child=""
-                      className="stage-fact is-third"
+                      className="stage-fact is-fourth"
                     >
                       <div className="stage-fact-wrap">
                         <div className="stage-fact-number">~80</div>

@@ -8,7 +8,7 @@ import { EvaluationFlow } from "@/components/EvaluationFlow";
 export const metadata: Metadata = {
   title: "Briefing de Projeto & Contato | Lucas Silva Santos",
   description:
-    "Inicie uma conversa técnica ou briefing de projeto com Lucas Silva Santos — Engenheiro Eletricista, Gerente de Projetos, Energia, Dados & Automação.",
+    "Inicie uma conversa técnica ou briefing de projeto com Lucas Silva Santos, Engenheiro Eletricista e Gerente de Projetos em Energia, Dados & Automação.",
   alternates: { canonical: `${SITE.url}/contato/` },
   openGraph: {
     title: "Briefing de Projeto & Contato | Lucas Silva Santos",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: `${SITE.url}/contato-og.jpg`,
         width: 1200,
         height: 630,
-        alt: "Lucas Silva Santos — Briefing de Projeto & Contato",
+        alt: "Lucas Silva Santos | Briefing de Projeto & Contato",
       },
     ],
     type: "website",

@@ -23,7 +23,7 @@ export function DailyMeals() {
             </h3>
           </div>
           <p className="flavour-paragraph" style={{ maxWidth: "42ch" }}>
-            {INTERACTIVE_SHOWCASE.projectName} — {INTERACTIVE_SHOWCASE.disclaimer}
+            {INTERACTIVE_SHOWCASE.projectName}: {INTERACTIVE_SHOWCASE.disclaimer}
           </p>
         </div>
 

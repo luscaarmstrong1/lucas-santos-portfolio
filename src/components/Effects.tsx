@@ -644,24 +644,45 @@ export function Effects() {
       });
     })();
 
-    // Marquee scroll animation
+    // Marquee scroll animation & hover-to-circulate interaction
     queryAll("[data-marquee]").forEach((mEl) => {
       const tp = queryOne("[data-marquee-svg] textPath", mEl);
       if (tp && !reducedMotion) {
-        gsap
-          .timeline({
+        let hoverLoop: gsap.core.Tween | null = null;
+
+        gsap.fromTo(
+          tp,
+          { attr: { startOffset: "-30%" } },
+          {
+            attr: { startOffset: "-60%" },
+            ease: "none",
+            duration: 1,
             scrollTrigger: {
               trigger: mEl,
               start: "top bottom",
               end: "bottom top",
               scrub: true,
             },
-          })
-          .fromTo(
-            tp,
-            { attr: { startOffset: "-30%" } },
-            { attr: { startOffset: "-60%" }, ease: "none", duration: 1 }
-          );
+          }
+        );
+
+        mEl.addEventListener("mouseenter", () => {
+          const currentAttr = tp.getAttribute("startOffset") || "-30%";
+          const currentNum = parseFloat(currentAttr) || -30;
+          hoverLoop = gsap.to(tp, {
+            attr: { startOffset: `${currentNum - 150}%` },
+            duration: 10,
+            ease: "none",
+            repeat: -1,
+          });
+        });
+
+        mEl.addEventListener("mouseleave", () => {
+          if (hoverLoop) {
+            hoverLoop.kill();
+            hoverLoop = null;
+          }
+        });
       }
     });
 

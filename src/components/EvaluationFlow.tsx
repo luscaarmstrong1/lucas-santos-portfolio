@@ -241,7 +241,7 @@ export function EvaluationFlow() {
     );
   };
 
-  const summarySubject = `Briefing de Projeto — ${answers.nome ?? "Contato"} (${
+  const summarySubject = `Briefing de Projeto: ${answers.nome ?? "Contato"} (${
     answers.demanda ?? "Engenharia & Tecnologia"
   })`;
   const summaryText = [
@@ -300,7 +300,7 @@ export function EvaluationFlow() {
             <p key={idx} className="balao balao--img">
               <img
                 src={msg.img}
-                alt="Lucas Silva Santos — Engenheiro Eletricista | Gerente de Projetos | Energia, Dados & Automação"
+                alt="Lucas Silva Santos | Engenheiro Eletricista | Gerente de Projetos | Energia, Dados & Automação"
                 width={1200}
                 height={630}
               />

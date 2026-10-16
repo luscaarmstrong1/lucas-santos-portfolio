@@ -69,7 +69,7 @@ export const SITE = {
   nomeCompleto: 'Lucas Silva Santos',
   cargo: 'Engenheiro Eletricista | Gerente de Projetos',
   descricao:
-    'Portfólio de Lucas Silva Santos — engenharia elétrica, energia solar, regulação técnica, ciência de dados, inteligência artificial, automação e desenvolvimento de aplicações.',
+    'Portfólio de Lucas Silva Santos com foco em engenharia elétrica, energia solar, regulação técnica, ciência de dados, inteligência artificial, automação e desenvolvimento de aplicações.',
   linkedin: SOCIAL_LINKS.linkedin,
   linkedinHandle: 'in/lucasssantos1',
   github: SOCIAL_LINKS.github,
@@ -87,7 +87,7 @@ export function linkWhatsApp(mensagem?: string): string {
 }
 
 export function linkEmail(assunto?: string, corpo?: string): string {
-  const s = encodeURIComponent(assunto || 'Contato via Portfólio — Lucas Santos');
+  const s = encodeURIComponent(assunto || 'Contato via Portfólio: Lucas Santos');
   const b = encodeURIComponent(
     corpo || 'Olá, Lucas!\n\nVi seu portfólio e gostaria de conversar sobre um projeto ou oportunidade.\n'
   );
@@ -107,7 +107,7 @@ export interface EducationItem {
 export const EDUCATION: EducationItem[] = [
   {
     degree: 'Engenharia Elétrica',
-    institution: 'FEPI — Centro Universitário de Itajubá',
+    institution: 'FEPI (Centro Universitário de Itajubá)',
     period: 'Concluído em Jul/2025',
     status: 'Graduado',
     details:
@@ -124,7 +124,7 @@ export const EDUCATION: EducationItem[] = [
   {
     degree: 'Pós-graduação em Ciência de Dados e Inteligência Artificial',
     institution: 'UNINTER',
-    period: 'Set/2025 – Em andamento',
+    period: 'Set/2025 a Em andamento',
     status: 'Em andamento',
     details:
       'Modelagem analítica, aprendizado de máquina, engenharia de dados, simulações e automação inteligente.',
@@ -414,7 +414,7 @@ export const INTERACTIVE_SHOWCASE = {
   stages: [
     {
       id: 'modelagem',
-      stepLabel: 'ETAPA 1 — MODELAGEM',
+      stepLabel: 'ETAPA 1: MODELAGEM',
       titleLine1: 'Modelagem',
       titleLine2: 'Física FV',
       subtitle: 'ETAPA 01 • PARÂMETROS E GERAÇÃO ESPERADA',
@@ -426,7 +426,7 @@ export const INTERACTIVE_SHOWCASE = {
     },
     {
       id: 'analise-dados',
-      stepLabel: 'ETAPA 2 — ANÁLISE DE DADOS',
+      stepLabel: 'ETAPA 2: ANÁLISE DE DADOS',
       titleLine1: 'Análise de',
       titleLine2: 'Dados & Twin',
       subtitle: 'ETAPA 02 • ESPERADO VS OBSERVADO',
@@ -438,7 +438,7 @@ export const INTERACTIVE_SHOWCASE = {
     },
     {
       id: 'diagnostico',
-      stepLabel: 'ETAPA 3 — DIAGNÓSTICO',
+      stepLabel: 'ETAPA 3: DIAGNÓSTICO',
       titleLine1: 'Diagnóstico',
       titleLine2: '& Perdas',
       subtitle: 'ETAPA 03 • DESEMPENHO, FALHAS E O&M',
@@ -450,7 +450,7 @@ export const INTERACTIVE_SHOWCASE = {
     },
     {
       id: 'otimizacao',
-      stepLabel: 'ETAPA 4 — OTIMIZAÇÃO',
+      stepLabel: 'ETAPA 4: OTIMIZAÇÃO',
       titleLine1: 'Otimização',
       titleLine2: 'BESS & LCOS',
       subtitle: 'ETAPA 04 • ARMAZENAMENTO E DECISÃO ECONÔMICA',
@@ -477,9 +477,9 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     company: 'RENOVERA',
     location: 'São João da Boa Vista, SP',
-    currentRole: 'Gerente de Projetos (Set/2025 – Presente)',
-    previousRole: 'Anteriormente: Analista de Projetos e Equipamentos (Out/2024 – Set/2025)',
-    period: 'Out/2024 – Presente',
+    currentRole: 'Gerente de Projetos (Set/2025 a Presente)',
+    previousRole: 'Anteriormente: Analista de Projetos e Equipamentos (Out/2024 a Set/2025)',
+    period: 'Out/2024 a Presente',
     summary:
       'Liderança de engenharia, homologação de carteira nacional de projetos fotovoltaicos, responsabilidade técnica, consultoria técnico-regulatória e transformação digital da operação.',
     highlights: [
@@ -493,7 +493,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     company: 'OMEGA IMPORTS',
     location: 'Operação Digital & Marketplace',
     currentRole: 'Fundador e Gestor de Operações',
-    period: 'Dez/2024 – Atual',
+    period: 'Dez/2024 a Atual',
     summary:
       'Iniciativa empreendedora voltada à comercialização de componentes eletrônicos, dispositivos IoT, sensores e equipamentos de automação.',
     highlights: [
@@ -504,9 +504,9 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     company: 'SOL PLACE',
     location: 'Itajubá, MG',
-    currentRole: 'Analista de Projetos e Sistemas Fotovoltaicos (Dez/2023 – Fev/2025)',
-    previousRole: 'Anteriormente: Estagiário em Engenharia Eletrônica (Set/2023 – Dez/2023)',
-    period: 'Set/2023 – Fev/2025',
+    currentRole: 'Analista de Projetos e Sistemas Fotovoltaicos (Dez/2023 a Fev/2025)',
+    previousRole: 'Anteriormente: Estagiário em Engenharia Eletrônica (Set/2023 a Dez/2023)',
+    period: 'Set/2023 a Fev/2025',
     summary:
       'Análise técnica de sistemas fotovoltaicos, suporte especializado a integradores, integração de plataformas via API e gestão de dispositivos IoT de monitoramento.',
     highlights: [
@@ -519,7 +519,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     company: 'IRRICONTROL',
     location: 'Itajubá, MG',
     currentRole: 'Estagiário em Engenharia de Produto',
-    period: 'Set/2022 – Set/2023',
+    period: 'Set/2022 a Set/2023',
     summary:
       'Atuação em eletrônica, montagem, calibração, controle de qualidade e testes funcionais em equipamentos para irrigação inteligente.',
     highlights: [

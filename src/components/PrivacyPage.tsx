@@ -39,7 +39,7 @@ export function PrivacyPage() {
       <h2>5. Direitos do titular (LGPD)</h2>
       <p>
         Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você pode solicitar a qualquer momento a confirmação de tratamento, acesso, correção, anonimização ou exclusão integral dos seus dados, bem como revogar o consentimento, entrando em contato diretamente pelo{" "}
-        <a href={linkContatoEmail("Solicitação LGPD — Portfólio Lucas Silva Santos")}>
+        <a href={linkContatoEmail("Solicitação LGPD: Portfólio Lucas Silva Santos")}>
           e-mail de contato ({SITE.email})
         </a>{" "}
         ou pelo{" "}

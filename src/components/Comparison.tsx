@@ -206,7 +206,7 @@ export function Comparison() {
                               <svg
                                 viewBox="0 0 20 20"
                                 className="check"
-                                aria-label="Sim — Minha abordagem integrada"
+                                aria-label="Sim: Minha abordagem integrada"
                                 role="img"
                                 fill="none"
                               >
@@ -227,7 +227,7 @@ export function Comparison() {
                             <svg
                               viewBox="0 0 20 20"
                               className="check"
-                              aria-label="Não — Abordagem isolada"
+                              aria-label="Não: Abordagem isolada"
                               role="img"
                               fill="none"
                             >
