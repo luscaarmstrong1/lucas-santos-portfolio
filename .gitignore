@@ -1,0 +1,5 @@
+node_modules/
+.next/
+audit/
+audit-v2/
+*.log
