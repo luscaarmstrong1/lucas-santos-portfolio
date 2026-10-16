@@ -493,12 +493,15 @@ export const EXPERIENCE: ExperienceItem[] = [
     company: 'OMEGA IMPORTS',
     location: 'Operação Digital & Marketplace',
     currentRole: 'Fundador e Gestor de Operações',
+    previousRole: 'Iniciativa Empreendedora: E-commerce de Tecnologia & Automação',
     period: 'Dez/2024 a Atual',
     summary:
       'Iniciativa empreendedora voltada à comercialização de componentes eletrônicos, dispositivos IoT, sensores e equipamentos de automação.',
     highlights: [
-      'Estruturação completa da operação comercial, curadoria técnica de produtos, importação, precificação, estoque e logística em marketplace.',
-      'Desenvolvimento de catálogo digital próprio e automações operacionais para análise de margens, concorrência e reposição.',
+      'Estruturação completa da operação comercial, curadoria técnica de produtos, importação, precificação, controle de estoque e logística em marketplace.',
+      'Desenvolvimento de catálogo digital próprio e automações operacionais em Python para análise de margens, monitoramento de concorrência e reposição.',
+      'Gestão de carteira de dispositivos eletrônicos, sensores IoT e módulos de automação, garantindo suporte técnico especializado e alta avaliação de clientes.',
+      'Implementação de pipelines de dados integrando APIs de vendas, processamento de pedidos e conciliação financeira com rastreabilidade total.',
     ],
   },
   {
@@ -510,21 +513,25 @@ export const EXPERIENCE: ExperienceItem[] = [
     summary:
       'Análise técnica de sistemas fotovoltaicos, suporte especializado a integradores, integração de plataformas via API e gestão de dispositivos IoT de monitoramento.',
     highlights: [
-      'Análise técnica e econômica de mais de 600 projetos fotovoltaicos e suporte técnico nacional com ~90% de resolução no primeiro contato.',
-      'Gestão e otimização do fluxo de mais de 300 dispositivos IoT de monitoramento fotovoltaico, elevando a produtividade operacional em ~30%.',
-      'Desenvolvimento de automação em VBA que reduziu em mais de 90% o tempo de geração de relatórios e criação de dashboards em Power BI.',
+      'Análise técnica e econômica de mais de 600 projetos fotovoltaicos e suporte técnico nacional especializado com taxa de ~90% de resolução no primeiro contato.',
+      'Gestão e otimização do fluxo operacional de mais de 300 dispositivos IoT de monitoramento solar, elevando a produtividade da equipe em ~30%.',
+      'Desenvolvimento de automação em VBA e scripts de processamento que reduziram em mais de 90% o tempo de geração de relatórios técnicos de engenharia.',
+      'Modelagem de dashboards analíticos em Power BI para acompanhamento de KPIs de campo, telemetria de geração e rastreabilidade de atendimentos técnicos.',
     ],
   },
   {
     company: 'IRRICONTROL',
     location: 'Itajubá, MG',
     currentRole: 'Estagiário em Engenharia de Produto',
+    previousRole: 'Pesquisa & Desenvolvimento: Hardware & Sistemas Embarcados',
     period: 'Set/2022 a Set/2023',
     summary:
       'Atuação em eletrônica, montagem, calibração, controle de qualidade e testes funcionais em equipamentos para irrigação inteligente.',
     highlights: [
-      'Montagem, calibração, inspeção e testes funcionais em mais de 2.000 unidades de equipamentos eletrônicos e sistemas embarcados.',
-      'Padronização de procedimentos operacionais, controle de qualidade (QA), identificação de falhas e documentação técnica de produção.',
+      'Montagem técnica, calibração de precisão, inspeção e testes funcionais em bancada para mais de 2.000 unidades de equipamentos eletrônicos e embarcados.',
+      'Padronização de procedimentos operacionais (POP), controle de qualidade rigoroso (QA), identificação de falhas em circuitos e documentação de produção.',
+      'Validação funcional de hardware para irrigação inteligente, executando testes de estresse, retrabalho de componentes SMD e verificação de firmware.',
+      'Interface técnica direta com a engenharia de desenvolvimento para sugestões de melhoria em layout de placas, redução de retrabalho e confiabilidade.',
     ],
   },
 ];
