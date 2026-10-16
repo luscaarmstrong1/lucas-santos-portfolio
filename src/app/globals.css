@@ -567,14 +567,17 @@ html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans-se
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.45em;
+  justify-content: space-between;
   flex-grow: 1;
+  gap: 0.5em;
 }
 .skill-tag {
+  flex: 1;
+  min-height: 2.85em;
   display: flex;
   align-items: center;
   gap: 0.6em;
-  padding: 0.45em 0.65em;
+  padding: 0.45em 0.7em;
   border-radius: 0.375em;
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.07);
