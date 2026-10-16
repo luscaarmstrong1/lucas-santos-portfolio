@@ -18,7 +18,7 @@ export function ExperienceSection() {
           {EXPERIENCE.map((item) => (
             <article key={item.company} className="exp-card">
               <div className="exp-card-top">
-                <div>
+                <div className="exp-info">
                   <h3 className="exp-company">{item.company}</h3>
                   <div className="exp-role">{item.currentRole}</div>
                   {item.previousRole && (
@@ -37,48 +37,41 @@ export function ExperienceSection() {
         </div>
 
         <div className="skills-block">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-end",
-              flexWrap: "wrap",
-              gap: "1em",
-              marginBottom: "2em",
-            }}
-          >
+          <div className="skills-block-header">
             <div>
-              <span
-                style={{
-                  fontFamily: "var(--font-mao), Kalam, cursive",
-                  fontSize: "1.6em",
-                  color: "var(--color-gold-accent)",
-                  display: "block",
-                  marginBottom: "0.25em",
-                }}
-              >
+              <span className="skills-eyebrow">
                 competências e ferramentas
               </span>
-              <h3 className="skills-block-title" style={{ marginBottom: 0 }}>
+              <h3 className="skills-block-title">
                 Stack Técnica &amp; Gestão
               </h3>
             </div>
-            <span style={{ fontSize: "1.25em", color: "var(--color-text-light-muted)" }}>
-              Engenharia Elétrica • Ciência de Dados • Python • Automação • Liderança de Projetos
-            </span>
+            <div className="skills-summary-pills" aria-label="Áreas de especialidade">
+              <span className="summary-pill">Engenharia Elétrica</span>
+              <span className="summary-pill">Ciência de Dados</span>
+              <span className="summary-pill">Python</span>
+              <span className="summary-pill">Automação</span>
+              <span className="summary-pill">Liderança de Projetos</span>
+            </div>
           </div>
 
           <div className="skills-categories">
             {SKILLS.map((group) => (
               <div key={group.category} className="skill-cat-card">
-                <h4 className="skill-cat-title">{group.category}</h4>
-                <div className="skill-tags">
-                  {group.items.map((skill) => (
-                    <span key={skill} className="skill-tag">
-                      {skill}
-                    </span>
-                  ))}
+                <div className="skill-cat-top">
+                  <span className="skill-cat-code">{group.code}</span>
+                  <span className="skill-cat-count">{group.items.length} competências</span>
                 </div>
+                <h4 className="skill-cat-title">{group.category}</h4>
+                <div className="skill-cat-line" />
+                <ul className="skill-tags">
+                  {group.items.map((skill) => (
+                    <li key={skill} className="skill-tag">
+                      <span className="skill-tag-dot" />
+                      <span className="skill-tag-label">{skill}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
