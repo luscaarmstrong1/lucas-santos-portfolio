@@ -402,6 +402,58 @@ export function Specialties() {
                 </g>
               </svg>
             </div>
+            <div data-sequence-signature-software="" className="sequence-inner-signature is-software">
+              <svg
+                viewBox="0 0 340 140"
+                width={340}
+                height={140}
+                className="sequence-inner-signature-img"
+                aria-hidden="true"
+                overflow="visible"
+              >
+                <g
+                  transform="rotate(4 170 70)"
+                  fill="currentColor"
+                  style={{ fontFamily: "var(--font-mao)" }}
+                  fontSize={34}
+                >
+                  <text x={0} y={38}>
+                    também atuo com
+                  </text>
+                  <text x={14} y={76}>
+                    criação de sites e
+                  </text>
+                  <text x={28} y={114}>
+                    landing pages
+                  </text>
+                </g>
+              </svg>
+              <svg
+                viewBox="0 0 340 140"
+                width={340}
+                height={140}
+                className="sequence-inner-signature-img is-wiggle"
+                aria-hidden="true"
+                overflow="visible"
+              >
+                <g
+                  transform="rotate(4 170 70)"
+                  fill="currentColor"
+                  style={{ fontFamily: "var(--font-mao)" }}
+                  fontSize={34}
+                >
+                  <text x={0} y={38}>
+                    também atuo com
+                  </text>
+                  <text x={14} y={76}>
+                    criação de sites e
+                  </text>
+                  <text x={28} y={114}>
+                    landing pages
+                  </text>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
         <div className="sequence-cards-mobile">

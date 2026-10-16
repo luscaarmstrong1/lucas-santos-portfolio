@@ -841,6 +841,21 @@ html, body {
   right: 3% !important;
 }
 
+/* 6.1 Assinatura Manuscrita do Card de Automação & Software */
+.sequence-inner-signature.is-software {
+  top: 15em !important;
+  right: 14em !important;
+  width: 14em !important;
+  color: var(--dark-green) !important;
+  pointer-events: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  .sequence-inner-signature.is-software {
+    display: none !important;
+  }
+}
+
 /* 7. Gráficos Técnicos e Mockups Perfeitamente Alinhados (Sem rotações invertidas) */
 .flavour-left-dose,
 .flavour-slide-dose,
