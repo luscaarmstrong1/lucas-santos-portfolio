@@ -34,12 +34,12 @@ export function About() {
                 <div data-inertia-item-child="" className="testimonial-inner _1">
                   <img
                     className="testimonial-img"
-                    src="/assets/images/energy-editorial.webp"
-                    alt="Engenharia de Sistemas de Potência, Geração Distribuída e Regulação"
+                    src="/assets/images/automation-editorial.webp"
+                    alt="Automação & Gestão de Processos, IoT e Sistemas Inteligentes"
                     loading="lazy"
                   />
                   <div className="testimonial-text-inner">
-                    <div className="testimonial-text">Sistemas &amp; Energia</div>
+                    <div className="testimonial-text">Automação &amp; Gestão</div>
                   </div>
                 </div>
               </div>
@@ -50,12 +50,12 @@ export function About() {
                 <div data-inertia-item-child="" className="testimonial-inner _2">
                   <img
                     className="testimonial-img"
-                    src="/assets/images/lucas-about.webp"
-                    alt="Lucas Silva Santos, Engenheiro Eletricista"
+                    src="/assets/images/energy-editorial.webp"
+                    alt="Sistemas & Energia, Geração Distribuída e Subestações"
                     loading="lazy"
                   />
                   <div className="testimonial-text-inner">
-                    <div className="testimonial-text">Lucas Silva Santos</div>
+                    <div className="testimonial-text">Sistemas &amp; Energia</div>
                   </div>
                 </div>
               </div>
