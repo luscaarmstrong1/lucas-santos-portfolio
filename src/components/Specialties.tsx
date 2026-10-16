@@ -378,9 +378,9 @@ export function Specialties() {
           <div data-sequence-canvas="" className="sequence-canvas sequence-prato">
             <img
               src="/assets/images/solar-engineering.webp"
-              alt="Arquitetura técnica de sistemas fotovoltaicos, BESS e subestações"
-              width={904}
-              height={897}
+              alt="Ambiente de trabalho e engenharia de projetos de Lucas Santos"
+              width={1024}
+              height={682}
             />
           </div>
           <div className="sequence-cards">
