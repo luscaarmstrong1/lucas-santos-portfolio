@@ -46,10 +46,10 @@ export function DailyMeals() {
                     fontSize={29}
                   >
                     <text x={0} y={38}>
-                      gêmeo digital
+                      análise preditiva
                     </text>
                     <text x={18} y={68}>
-                      + despacho BESS
+                      &amp; simulação em Python
                     </text>
                   </g>
                 </svg>
@@ -68,10 +68,10 @@ export function DailyMeals() {
                     fontSize={29}
                   >
                     <text x={0} y={38}>
-                      gêmeo digital
+                      análise preditiva
                     </text>
                     <text x={18} y={68}>
-                      + despacho BESS
+                      &amp; simulação em Python
                     </text>
                   </g>
                 </svg>

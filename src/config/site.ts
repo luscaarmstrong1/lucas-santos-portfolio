@@ -359,11 +359,11 @@ export interface InteractiveStage {
 export const INTERACTIVE_SHOWCASE = {
   sectionTitle: 'Um projeto. Múltiplas camadas de engenharia.',
   sectionSubtitle: 'Do modelo ao diagnóstico. Da análise à decisão.',
-  projectName: 'Solar PV Digital Twin & BESS Optimization Platform',
+  projectName: 'Gêmeo Digital FV & Otimização BESS',
   githubUrl: 'https://github.com/luscaarmstrong1/solar-pv-digital-twin-bess-platform',
   ctaLabel: 'Explorar projeto no GitHub',
   disclaimer:
-    'Plataforma analítica e demonstrativa de portfólio baseada em modelagem física reproduzível e séries sintéticas auditáveis.',
+    'Simulação energética, análise preditiva em Python e despacho inteligente de baterias.',
   stages: [
     {
       id: 'modelagem',
