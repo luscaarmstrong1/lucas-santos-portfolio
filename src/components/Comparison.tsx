@@ -60,21 +60,6 @@ export function Comparison() {
               width={941}
               height={1672}
             />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 575 559"
-              width="100%"
-              data-fill-line=""
-              className="benefit-svg"
-              aria-hidden="true"
-            >
-              <path
-                stroke="currentColor"
-                strokeWidth="27"
-                d="M-56.447 495.508C-26.61 513.052 53.628 569.352 87 532.069c46.24-51.66 4.952-146.571-102.084-223.636-107.035-77.065-70.703-150.5-16.274-179.818C100.1 57.804 196.947 412.744 398.5 290.569 583.168 178.628 665-36.931 945 24.953"
-              />
-            </svg>
           </div>
           <div
             id="w-node-_32be253f-aa6e-8103-6d3f-40e63162832f-0ac01850"
