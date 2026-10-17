@@ -842,17 +842,37 @@ html, body {
 }
 
 /* 6.1 Assinatura Manuscrita do Card de Automação & Software */
-.sequence-inner-signature.is-software {
-  top: 15em !important;
-  right: 14em !important;
-  width: 14em !important;
-  color: var(--dark-green) !important;
-  pointer-events: none !important;
+.statement-card.is-fourth {
+  overflow: visible !important;
 }
-
+.statement-card.is-fourth .statement-card-wrapper {
+  overflow: visible !important;
+  position: relative !important;
+}
+.card-side-handwriting {
+  position: absolute;
+  top: 48%;
+  left: 104%;
+  transform: translateY(-50%);
+  width: 14em;
+  color: var(--dark-green);
+  pointer-events: none;
+  display: grid;
+  z-index: 10;
+}
+.card-side-handwriting-svg {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+}
 @media screen and (max-width: 991px) {
-  .sequence-inner-signature.is-software {
-    display: none !important;
+  .card-side-handwriting {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
   }
 }
 

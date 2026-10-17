@@ -285,7 +285,6 @@ export function Effects() {
       const svgPaths = queryAll("[data-sequence-svg] path", seq);
       const smileys = queryAll("[data-sequence-smiley]", seq);
       const innerSig = queryOne("[data-sequence-signature]", seq);
-      const innerSigSoftware = queryOne("[data-sequence-signature-software]", seq);
       const titleSplitEl = queryOne("[data-sequence-title-split]", seq);
       const finalSigs = queryAll("[data-sequence-final-signature]", seq);
       const cookie1 = queryOne("[data-sequence-cookie-first]", seq);
@@ -376,7 +375,6 @@ export function Effects() {
           xPercent: (_i, el) => (el.hasAttribute("data-sequence-card-left") ? 4 : -4),
         });
         gsap.set(innerSig, { opacity: 0 });
-        if (innerSigSoftware) gsap.set(innerSigSoftware, { opacity: 0 });
         gsap.set(title, { y: h, scale: 0.7 });
         gsap.set(finalSigs, { y: h });
         gsap.set(cookie1, { y: h, x: 64 });
@@ -441,22 +439,6 @@ export function Effects() {
           },
           "step+=.75"
         );
-
-        if (innerSigSoftware) {
-          mainTl.to(
-            innerSigSoftware,
-            {
-              keyframes: {
-                "10%": { opacity: 1 },
-                "50%": { opacity: 1 },
-                "68%": { opacity: 0 },
-              },
-              duration: 1.5,
-              ease: "none",
-            },
-            "step+=2.45"
-          );
-        }
 
         mainTl.fromTo(
           svgPaths,
