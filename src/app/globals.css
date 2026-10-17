@@ -823,56 +823,86 @@ html, body {
 
 .sequence-element-item:hover {
   transform: scale(1.08) translateY(-8px) !important;
-  filter: drop-shadow(0 22px 36px rgba(7, 24, 39, 0.42)) brightness(1.03) !important;
+  filter: drop-shadow(0 24px 38px rgba(7, 24, 39, 0.44)) brightness(1.04) !important;
   z-index: 15 !important;
 }
 
-/* Quadrante Superior-Esquerdo: Inversor Solar */
+/* 1. Inversor Solar Industrial (Canto Superior Esquerdo) */
 .sequence-element-item.elem-inverter {
-  width: 11.5em !important;
+  width: 10.5em !important;
   height: auto !important;
-  top: 14% !important;
-  left: 2.5% !important;
+  top: 9% !important;
+  left: 2.2% !important;
 }
 
-/* Quadrante Inferior-Esquerdo (Extremo): Transformador de Subestação */
+/* 2. Transformador de Subestação (Inferior Esquerdo - Mais para a esquerda) */
 .sequence-element-item.elem-transformer {
   width: 10em !important;
   height: auto !important;
-  bottom: 2.5em !important;
-  left: 1.5% !important;
+  bottom: 2.2em !important;
+  left: 1.2% !important;
 }
 
-/* Quadrante Inferior-Esquerdo (Interno): Carregador Veicular EV */
+/* 3. Carregador Veicular EV (Inferior Esquerdo - Entre o transformador e o card central) */
 .sequence-element-item.elem-ev-charger {
   width: 7.2em !important;
   height: auto !important;
-  bottom: 3.5em !important;
-  left: 17.5% !important;
+  bottom: 2.2em !important;
+  left: 15.8% !important;
 }
 
-/* Quadrante Superior-Direito: Workstation & Monitores */
+/* 4. Workstation de Engenharia (Canto Superior Direito) */
 .sequence-element-item.elem-workstation {
-  width: 12.5em !important;
+  width: 12.8em !important;
   height: auto !important;
-  top: 14% !important;
-  right: 2.5% !important;
+  top: 9% !important;
+  right: 2.2% !important;
 }
 
-/* Quadrante Inferior-Direito (Interno): CLP Automação Industrial */
+/* 5. CLP Automação Industrial (Inferior Direito - Entre o card central e o servidor) */
 .sequence-element-item.elem-plc {
-  width: 10.5em !important;
+  width: 10.8em !important;
   height: auto !important;
-  bottom: 3.5em !important;
+  bottom: 2.2em !important;
   right: 17% !important;
 }
 
-/* Quadrante Inferior-Direito (Extremo): Racks de Servidor */
+/* 6. Racks de Servidor e Datacenter (Inferior Direito - Canto extremo direito) */
 .sequence-element-item.elem-server-rack {
   width: 10.5em !important;
   height: auto !important;
-  bottom: 2.5em !important;
-  right: 1.5% !important;
+  bottom: 2.2em !important;
+  right: 1.2% !important;
+}
+
+/* Ajuste refinado das anotações manuscritas apontando para os equipamentos corretos */
+@media screen and (min-width: 992px) {
+  .sequence-final-signature:not(.is-second):not(.is-first-arrow):not(.is-second-arrow) {
+    bottom: 14.8em !important;
+    left: 10.5em !important;
+    width: 8em !important;
+    rotate: -8deg !important;
+  }
+  .sequence-final-signature.is-first-arrow {
+    bottom: 11.2em !important;
+    left: 13.8em !important;
+    width: 3.5em !important;
+    rotate: 15deg !important;
+  }
+  .sequence-final-signature.is-second {
+    bottom: 14.8em !important;
+    right: 11em !important;
+    left: auto !important;
+    width: 9.5em !important;
+    rotate: 5deg !important;
+  }
+  .sequence-final-signature.is-second-arrow {
+    bottom: 11.2em !important;
+    right: 14.2em !important;
+    left: auto !important;
+    width: 3.2em !important;
+    rotate: -90deg !important;
+  }
 }
 
 /* 6.1 Assinatura Manuscrita do Card de Automação & Software */
