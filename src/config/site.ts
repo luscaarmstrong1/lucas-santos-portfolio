@@ -264,11 +264,13 @@ export interface ProjectItem {
   id: string;
   title: string;
   category: string;
-  projectType: 'Demonstrativo Analítico' | 'Produto Digital' | 'Presença Digital Técnica' | 'Empreendedorismo & Operação';
+  projectType: 'Plataforma Web B2B' | 'Landing Pages & Sites' | 'Catálogo & E-commerce' | 'Site Institucional Técnico' | 'Portal & Landing Pages';
   description: string;
   syntheticNote?: string;
   technologies: string[];
-  githubUrl: string;
+  siteUrl: string;
+  siteDomain: string;
+  githubUrl?: string;
   demoUrl?: string;
   image: string;
   metricsBadge: string;
@@ -276,118 +278,69 @@ export interface ProjectItem {
 
 export const FEATURED_PROJECTS: ProjectItem[] = [
   {
-    id: 'digital-twin-solar-bess',
-    title: 'Digital Twin Solar & BESS',
-    category: 'Engenharia • Energia • Python',
-    projectType: 'Demonstrativo Analítico',
+    id: 'prospecta-nicho-b2b',
+    title: 'Prospecta Nicho B2B',
+    category: 'Inteligência Comercial • Dados • SaaS',
+    projectType: 'Plataforma Web B2B',
     description:
-      'Plataforma analítica de gêmeo digital fotovoltaico, desempenho energético, monitoramento, diagnóstico operacional, armazenamento por baterias (BESS) e análise de cenários.',
-    syntheticNote: 'Caráter demonstrativo e analítico com dados sintéticos classificados e cálculos reproduzíveis.',
-    technologies: ['Python', 'pvlib', 'Pandas', 'FastAPI', 'Streamlit', 'BESS Optimization'],
-    githubUrl: 'https://github.com/luscaarmstrong1/solar-pv-digital-twin-bess-platform',
-    image: '/assets/images/projects/proj-01-digital-twin.webp',
-    metricsBadge: '1.20 MWp • BESS 250 kW / 750 kWh',
+      'Plataforma digital para prospecção empresarial e estruturação de bases B2B em todo o Brasil, com segmentação por CNAE, porte e região, enriquecimento automatizado e fluxos comerciais.',
+    technologies: ['Next.js', 'TypeScript', 'Supabase', 'Python', 'Dados B2B'],
+    siteUrl: 'https://luscaarmstrong1.github.io/prospecta-nicho/leads/',
+    siteDomain: 'Prospecta Nicho B2B',
+    image: '/assets/images/projects/proj-web-01-prospecta-b2b.webp',
+    metricsBadge: '+5.8M Empresas • Segmentação B2B',
   },
   {
-    id: 'energy-intelligence-ai',
-    title: 'Energy Intelligence AI',
-    category: 'Dados • IA • Energia',
-    projectType: 'Demonstrativo Analítico',
+    id: 'prospecta-nicho-sites',
+    title: 'Prospecta Nicho • Landing Pages & Sites',
+    category: 'Desenvolvimento Web • UI/UX • Conversão',
+    projectType: 'Landing Pages & Sites',
     description:
-      'Plataforma demonstrativa de inteligência energética integrando engenharia de dados, aprendizado de máquina (previsão de carga e geração, detecção de anomalias), análise operacional, APIs e visualização.',
-    syntheticNote: 'Ambiente demonstrativo sobre base sintética horária estruturada (Data Warehouse SQLite/Parquet).',
-    technologies: ['Python', 'Scikit-Learn', 'FastAPI', 'Streamlit', 'SQLite', 'MLOps'],
-    githubUrl: 'https://github.com/luscaarmstrong1/energy-intelligence-ai-platform',
-    demoUrl: 'https://luscaarmstrong1.github.io/energy-intelligence-ai-platform/',
-    image: '/assets/images/projects/proj-02-energy-ai.webp',
-    metricsBadge: 'Forecasting • Anomaly Detection • API',
-  },
-  {
-    id: 'brazilian-power-system-dashboard',
-    title: 'Dashboard do Sistema Elétrico Brasileiro',
-    category: 'Python • Dados • Sistemas Elétricos',
-    projectType: 'Demonstrativo Analítico',
-    description:
-      'Plataforma analítica do setor elétrico brasileiro, estruturada para explorar capacidade instalada (SIGA/ANEEL), geração e carga do SIN (ONS), expansão renovável e geração distribuída (MMGD).',
-    technologies: ['Python', 'Power BI', 'DAX', 'Streamlit', 'Dados ANEEL/ONS', 'Modelagem Dimensional'],
-    githubUrl: 'https://github.com/luscaarmstrong1/brazilian-power-system-dashboard',
-    image: '/assets/images/projects/proj-03-power-dashboard.webp',
-    metricsBadge: 'SIN & ANEEL • Capacidade, Carga & MMGD',
-  },
-  {
-    id: 'prospecta-nicho',
-    title: 'Prospecta Nicho',
-    category: 'Tecnologia • Inteligência Comercial • Automação',
-    projectType: 'Produto Digital',
-    description:
-      'Plataforma digital para prospecção empresarial e organização de dados B2B, com automação de enriquecimento, segmentação por nicho, integrações e fluxos operacionais.',
-    technologies: ['TypeScript', 'Next.js', 'Python', 'Automação B2B', 'Data Pipelines'],
-    githubUrl: 'https://github.com/luscaarmstrong1/prospecta-nicho',
-    image: '/assets/images/projects/proj-04-prospecta-nicho.webp',
-    metricsBadge: 'Inteligência Comercial • Dados B2B',
-  },
-  {
-    id: 'conexium-engenharia',
-    title: 'Conexium Engenharia',
-    category: 'Engenharia • Desenvolvimento Web',
-    projectType: 'Presença Digital Técnica',
-    description:
-      'Projeto de presença digital especializado em engenharia elétrica, consultoria técnico-regulatória, estudos de conexão e assistência técnica pericial.',
-    technologies: ['Astro', 'TypeScript', 'UI/UX Editorial', 'SEO Técnico', 'Engenharia Regulatória'],
-    githubUrl: 'https://github.com/luscaarmstrong1/conexium-engenharia',
-    image: '/assets/images/projects/proj-05-conexium.webp',
-    metricsBadge: 'Consultoria Regulatória & Perícias',
+      'Frente digital dedicada à criação de sites institucionais e landing pages de alta conversão, com design autoral responsivo, copy estratégica, SEO técnico e integração direta ao WhatsApp.',
+    technologies: ['React', 'Next.js', 'TypeScript', 'UI/UX Design', 'SEO & Performance'],
+    siteUrl: 'https://luscaarmstrong1.github.io/prospecta-nicho/',
+    siteDomain: 'Prospecta Web',
+    image: '/assets/images/projects/proj-web-02-prospecta-sites.webp',
+    metricsBadge: 'Alta Conversão • Mobile First',
   },
   {
     id: 'omega-imports',
     title: 'Omega Imports',
-    category: 'Empreendedorismo • E-commerce • Automação',
-    projectType: 'Empreendedorismo & Operação',
+    category: 'E-commerce • Eletrônica • IoT & Automação',
+    projectType: 'Catálogo & E-commerce',
     description:
-      'Operação digital de componentes eletrônicos, IoT e automação, fundada e gerida por mim, com catálogo web próprio, integração com marketplace, gestão de estoque e inteligência comercial.',
-    technologies: ['Gestão de Operações', 'IoT & Hardware', 'Automação Comercial', 'Catálogo Digital', 'Marketplace'],
-    githubUrl: 'https://github.com/luscaarmstrong1/omegaimports-catalogo',
-    image: '/assets/images/projects/proj-06-omega-imports.webp',
-    metricsBadge: 'Fundação & Gestão • Eletrônica & IoT',
+      'Catálogo digital e vitrine online de componentes eletrônicos, sensores, módulos ESP32/IoT e fontes para automação e prototipagem, com busca instantânea e checkout integrado.',
+    technologies: ['Next.js', 'TypeScript', 'Catálogo Digital', 'Integração Mercado Livre', 'UI/UX'],
+    siteUrl: 'https://luscaarmstrong1.github.io/omegaimports-catalogo/',
+    siteDomain: 'Omega Imports',
+    image: '/assets/images/projects/proj-web-03-omega-imports.webp',
+    metricsBadge: 'Eletrônica, IoT & Automação',
   },
   {
-    id: 'solar-energy-feasibility-simulator',
-    title: 'Simulador de Energia Solar',
-    category: 'Engenharia • Finanças • Simulação',
-    projectType: 'Demonstrativo Analítico',
+    id: 'conexium-engenharia',
+    title: 'Conexium Engenharia',
+    category: 'Engenharia Elétrica • Consultoria • Web',
+    projectType: 'Site Institucional Técnico',
     description:
-      'Modelagem técnico-econômica de sistemas fotovoltaicos em horizonte de 25 anos, com dimensionamento por HSP/PR, degradação anual, fluxo de caixa descontado, VPL, TIR, payback e LCOE.',
-    syntheticNote: 'Simulador analítico com premissas tarifárias e financeiras editáveis.',
-    technologies: ['Python', 'Streamlit', 'Excel Automatizado', 'Engenharia Econômica', 'VPL / TIR / LCOE'],
-    githubUrl: 'https://github.com/luscaarmstrong1/solar-energy-feasibility-simulator',
-    image: '/assets/images/projects/proj-07-solar-simulator.webp',
-    metricsBadge: 'Modelagem 25 Anos • VPL, TIR & LCOE',
+      'Presença digital corporativa especializada em engenharia elétrica, consultoria técnico-regulatória (ANEEL/PRODIST), estudos de conexão e assistência técnica pericial.',
+    technologies: ['Astro', 'TypeScript', 'Design Editorial', 'SEO Técnico', 'Performance'],
+    siteUrl: 'https://conexium-engenharia.vercel.app/',
+    siteDomain: 'Conexium Engenharia',
+    image: '/assets/images/projects/proj-web-04-conexium.webp',
+    metricsBadge: 'Engenharia, Regulação & Evidência',
   },
   {
-    id: 'mercado-livre-energia-simulador',
-    title: 'Simulador do Mercado Livre de Energia',
-    category: 'Energia • Economia • Python',
-    projectType: 'Demonstrativo Analítico',
+    id: 'renovera-landing-pages',
+    title: 'Renovera • Landing Pages',
+    category: 'Energia Solar • Projetos Elétricos • Web',
+    projectType: 'Portal & Landing Pages',
     description:
-      'Ferramenta de análise de migração do Ambiente de Contratação Regulada (ACR) ao Ambiente de Contratação Livre (ACL), com memória de cálculo auditável, break-even e análise de risco.',
-    syntheticNote: 'Estudo demonstrativo baseado em premissas configuráveis de tarifas e contratos.',
-    technologies: ['Python', 'Streamlit', 'Excel', 'Regulação CCEE/ANEEL', 'Análise de Cenários'],
-    githubUrl: 'https://github.com/luscaarmstrong1/mercado-livre-energia-simulador',
-    image: '/assets/images/projects/proj-08-mercado-livre.webp',
-    metricsBadge: 'ACR vs ACL • Break-Even & Sensibilidade',
-  },
-  {
-    id: 'green-hydrogen-simulator',
-    title: 'Hidrogênio Verde',
-    category: 'Energia • Modelagem • Python',
-    projectType: 'Demonstrativo Analítico',
-    description:
-      'Simulador técnico-econômico para produção de hidrogênio verde, integrando geração solar e eólica horária, eletrólise (PEM, Alcalino, SOEC), armazenamento BESS, balanço energético e LCOH.',
-    syntheticNote: 'Modelagem técnico-econômica demonstrativa validada por suíte automatizada de testes.',
-    technologies: ['Python', 'BESS Dispatch', 'Eletrólise PEM', 'LCOH', 'Streamlit', 'Pytest'],
-    githubUrl: 'https://github.com/luscaarmstrong1/green-hydrogen-techno-economic-simulator',
-    image: '/assets/images/projects/proj-09-green-hydrogen.webp',
-    metricsBadge: 'Solar + Eólica + BESS • Cálculo de LCOH',
+      'Ecossistema de landing pages públicas e portal institucional para soluções em energia solar, consultoria regulatória, projetos elétricos de média tensão e infraestrutura de eletropostos.',
+    technologies: ['TypeScript', 'Vite', 'Arquitetura Multi-Landing', 'UI/UX Técnico', 'Captação B2B'],
+    siteUrl: 'https://luscaarmstrong1.github.io/renovera-landings-publicas/',
+    siteDomain: 'Renovera Energia',
+    image: '/assets/images/projects/proj-web-05-renovera.webp',
+    metricsBadge: 'Solar • Regulação • Eletropostos',
   },
 ];
 

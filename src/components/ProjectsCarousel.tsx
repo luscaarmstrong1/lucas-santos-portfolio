@@ -1,6 +1,24 @@
 import React from "react";
-import { FEATURED_PROJECTS, SITE } from "@/config/site";
-import { GitHubIcon } from "./icons";
+import { FEATURED_PROJECTS } from "@/config/site";
+
+function GlobeLinkIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.9"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9.5" />
+      <path d="M2.5 12h19" />
+      <path d="M12 2.5a14.5 14.5 0 0 1 0 19 14.5 14.5 0 0 1 0-19" />
+    </svg>
+  );
+}
 
 export function ProjectsCarousel() {
   return (
@@ -16,7 +34,7 @@ export function ProjectsCarousel() {
         <img
           className="bg-img"
           src="/assets/images/energy-editorial.webp"
-          alt="Projetos de Engenharia, Energia, Dados e Inteligência Artificial"
+          alt="Sites, Plataformas Digitais e Landing Pages Desenvolvidas"
           data-testimonial-parallax-item=""
         />
       </div>
@@ -28,48 +46,48 @@ export function ProjectsCarousel() {
           >
             <div className="testimonial-signature">
               <svg
-                viewBox="0 0 320 32"
-                width={320}
+                viewBox="0 0 360 32"
+                width={360}
                 height={32}
                 className="testimonial-signature-img"
                 aria-hidden="true"
                 overflow="visible"
               >
                 <g
-                  transform="rotate(0 160 16)"
+                  transform="rotate(0 180 16)"
                   fill="currentColor"
                   style={{ fontFamily: "var(--font-mao)" }}
                   fontSize={26.5}
                 >
                   <text x={0} y={22}>
-                    repositórios oficiais no GitHub
+                    sites &amp; landing pages em produção
                   </text>
                 </g>
               </svg>
               <svg
-                viewBox="0 0 320 32"
-                width={320}
+                viewBox="0 0 360 32"
+                width={360}
                 height={32}
                 className="testimonial-signature-img is-wiggle"
                 aria-hidden="true"
                 overflow="visible"
               >
                 <g
-                  transform="rotate(0 160 16)"
+                  transform="rotate(0 180 16)"
                   fill="currentColor"
                   style={{ fontFamily: "var(--font-mao)" }}
                   fontSize={26.5}
                 >
                   <text x={0} y={22}>
-                    repositórios oficiais no GitHub
+                    sites &amp; landing pages em produção
                   </text>
                 </g>
               </svg>
             </div>
             <h2 className="testimonial-big-heading">
-              Teoria, dados
+              Sites, plataformas
               <br />
-              &amp; aplicação.
+              &amp; landing pages.
             </h2>
           </div>
           <div
@@ -77,9 +95,9 @@ export function ProjectsCarousel() {
             className="testimonial-slider"
           >
             <h3 className="testimonial-heading">
-              Projetos que conectam teoria,
+              Sites e landing pages desenvolvidos
               <br />
-              tecnologia e aplicação
+              com foco em conversão e autoridade
             </h3>
             <div
               data-testimonial-inview=""
@@ -97,7 +115,7 @@ export function ProjectsCarousel() {
                     type="button"
                     data-slider-left-button=""
                     className="testimonial-slider-button is-left"
-                    aria-label="Projeto anterior"
+                    aria-label="Site anterior"
                   >
                     <svg
                       viewBox="0 0 20 20"
@@ -119,7 +137,7 @@ export function ProjectsCarousel() {
                     type="button"
                     data-slider-right-button=""
                     className="testimonial-slider-button is-right"
-                    aria-label="Próximo projeto"
+                    aria-label="Próximo site"
                   >
                     <svg
                       viewBox="0 0 20 20"
@@ -149,7 +167,7 @@ export function ProjectsCarousel() {
                     className="testimonial-slider-item-wrap"
                   >
                     <a
-                      href={project.githubUrl}
+                      href={project.siteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       data-slider-item-inner=""
@@ -166,7 +184,7 @@ export function ProjectsCarousel() {
                         </div>
                         <img
                           src={project.image}
-                          alt={project.title}
+                          alt={`Tela inicial de ${project.title}`}
                           className="project-card-thumb"
                           loading="lazy"
                         />
@@ -206,15 +224,15 @@ export function ProjectsCarousel() {
                               gap: "0.4em",
                             }}
                           >
-                            <GitHubIcon className="testimonial-star testimonial-insta" />
-                            <span>{SITE.githubHandle}</span>
+                            <GlobeLinkIcon className="testimonial-star testimonial-insta" />
+                            <span>{project.siteDomain}</span>
                           </div>
                           <div className="testimonial-verified-wrap">
                             <div
                               className="testimonial-verified-text"
                               style={{ fontWeight: 600 }}
                             >
-                              Ver no GitHub →
+                              Acessar site →
                             </div>
                           </div>
                         </div>
