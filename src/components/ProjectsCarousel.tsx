@@ -25,18 +25,12 @@ export function ProjectsCarousel() {
     <div id="projetos" className="testimonial-section">
       <div data-testimonial-parallax="" className="bg-img-wrapper">
         <img
-          className="testimonial-top-img"
-          src="/assets/images/digital-products.webp"
-          alt=""
-          data-testimonial-parallax-item=""
-          style={{ opacity: 0.35, mixBlendMode: "screen" }}
-        />
-        <img
-          className="bg-img"
-          src="/assets/images/energy-editorial.webp"
-          alt="Sites, Plataformas Digitais e Landing Pages Desenvolvidas"
+          className="bg-img projects-bg-main"
+          src="/assets/images/projects-bg-webdev.webp"
+          alt="Ambiente de desenvolvimento web, código, sites e soluções digitais"
           data-testimonial-parallax-item=""
         />
+        <div className="projects-bg-gradient" aria-hidden="true" />
       </div>
       <div className="testimonial-container">
         <div className="grid-layout">
