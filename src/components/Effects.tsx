@@ -341,8 +341,8 @@ export function Effects() {
           keyframes: {
             "72%": { y: 0, scale: 1 },
             "100%": {
-              y: () => 0.27 * Math.min(innerHeight, 0.75 * innerWidth),
-              scale: 0.8,
+              y: () => 0.21 * Math.min(innerHeight, 0.75 * innerWidth),
+              scale: 0.92,
             },
           },
           duration: 1,
@@ -359,7 +359,7 @@ export function Effects() {
         gsap.to(canvas, {
           keyframes: {
             "75%": { scale: 1 },
-            "100%": { scale: 0.85, yPercent: 3.5 },
+            "100%": { scale: 0.92, yPercent: 2.5 },
           },
           duration: 1,
           ease: "none",
@@ -495,7 +495,7 @@ export function Effects() {
           fruitsTl.fromTo(
             elemInverter,
             { opacity: 0, xPercent: -35, yPercent: 40, scale: 0.65, rotate: -15 },
-            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 0.9 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: -4, ease: "elastic-ease-out-soft", duration: 0.9 },
             "step+=0.06"
           );
         }
@@ -503,7 +503,7 @@ export function Effects() {
           fruitsTl.fromTo(
             elemTransformer,
             { opacity: 0, xPercent: -45, yPercent: 60, scale: 0.65, rotate: -10 },
-            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 1.0 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 3, ease: "elastic-ease-out-soft", duration: 1.0 },
             "step+=0.1"
           );
         }
@@ -511,7 +511,7 @@ export function Effects() {
           fruitsTl.fromTo(
             elemEvCharger,
             { opacity: 0, xPercent: -25, yPercent: 50, scale: 0.65, rotate: 8 },
-            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 1.1 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: -2, ease: "elastic-ease-out-soft", duration: 1.1 },
             "step+=0.14"
           );
         }
@@ -519,7 +519,7 @@ export function Effects() {
           fruitsTl.fromTo(
             elemWorkstation,
             { opacity: 0, xPercent: 35, yPercent: 40, scale: 0.65, rotate: 12 },
-            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 0.9 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 4, ease: "elastic-ease-out-soft", duration: 0.9 },
             "step+=0.06"
           );
         }
@@ -527,7 +527,7 @@ export function Effects() {
           fruitsTl.fromTo(
             elemPlc,
             { opacity: 0, xPercent: 30, yPercent: 50, scale: 0.65, rotate: -8 },
-            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 1.05 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 2, ease: "elastic-ease-out-soft", duration: 1.05 },
             "step+=0.12"
           );
         }
@@ -535,7 +535,7 @@ export function Effects() {
           fruitsTl.fromTo(
             elemServerRack,
             { opacity: 0, xPercent: 45, yPercent: 60, scale: 0.65, rotate: 10 },
-            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 1.15 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: -3, ease: "elastic-ease-out-soft", duration: 1.15 },
             "step+=0.16"
           );
         }

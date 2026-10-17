@@ -809,6 +809,11 @@ html, body {
   position: relative !important;
   z-index: 10 !important;
 }
+@media screen and (min-width: 992px) {
+  .sequence-title {
+    font-size: 8.15em !important;
+  }
+}
 .sequence-element-item {
   position: absolute !important;
   z-index: 5 !important;
@@ -827,81 +832,92 @@ html, body {
   z-index: 15 !important;
 }
 
-/* 1. Inversor Solar Industrial (Canto Superior Esquerdo) */
+/* 1. Inversor Solar Industrial (Topo-Esquerda - Arco Superior) */
 .sequence-element-item.elem-inverter {
-  width: 10.5em !important;
+  width: 11.8em !important;
   height: auto !important;
-  top: 9% !important;
+  top: 5.5% !important;
+  left: 1.6% !important;
+}
+
+/* 2. Transformador de Subestação (Meio-Inferior Esquerda - Escalado no Arco) */
+.sequence-element-item.elem-transformer {
+  width: 13.4em !important;
+  height: auto !important;
+  bottom: 7.2em !important;
   left: 2.2% !important;
 }
 
-/* 2. Transformador de Subestação (Inferior Esquerdo - Mais para a esquerda) */
-.sequence-element-item.elem-transformer {
-  width: 10em !important;
-  height: auto !important;
-  bottom: 2.2em !important;
-  left: 1.2% !important;
-}
-
-/* 3. Carregador Veicular EV (Inferior Esquerdo - Entre o transformador e o card central) */
+/* 3. Carregador Veicular EV (Base Interna Esquerda - Próximo ao Centro) */
 .sequence-element-item.elem-ev-charger {
-  width: 7.2em !important;
+  width: 8.6em !important;
   height: auto !important;
   bottom: 2.2em !important;
-  left: 15.8% !important;
+  left: 19.8% !important;
 }
 
-/* 4. Workstation de Engenharia (Canto Superior Direito) */
+/* 4. Workstation de Engenharia e Dados (Topo-Direita - Arco Superior) */
 .sequence-element-item.elem-workstation {
-  width: 12.8em !important;
+  width: 13.6em !important;
   height: auto !important;
-  top: 9% !important;
+  top: 5.5% !important;
+  right: 1.4% !important;
+}
+
+/* 5. CLP Automação Industrial (Base Interna Direita - Próximo ao Centro) */
+.sequence-element-item.elem-plc {
+  width: 13.4em !important;
+  height: auto !important;
+  bottom: 3.0em !important;
+  right: 18.8% !important;
+}
+
+/* 6. Racks de Servidor e Datacenter (Meio-Inferior Direita - Escalado no Arco) */
+.sequence-element-item.elem-server-rack {
+  width: 13.6em !important;
+  height: auto !important;
+  bottom: 7.4em !important;
   right: 2.2% !important;
 }
 
-/* 5. CLP Automação Industrial (Inferior Direito - Entre o card central e o servidor) */
-.sequence-element-item.elem-plc {
-  width: 10.8em !important;
-  height: auto !important;
-  bottom: 2.2em !important;
-  right: 17% !important;
+/* Destaque maior para a imagem central no final da sequência */
+@media screen and (min-width: 992px) {
+  .sequence-prato img {
+    width: min(36vw, 48vh) !important;
+    max-width: 31em !important;
+    height: auto !important;
+    border-radius: 1.15em !important;
+    box-shadow: 0 24px 56px rgba(7, 24, 39, 0.28) !important;
+  }
 }
 
-/* 6. Racks de Servidor e Datacenter (Inferior Direito - Canto extremo direito) */
-.sequence-element-item.elem-server-rack {
-  width: 10.5em !important;
-  height: auto !important;
-  bottom: 2.2em !important;
-  right: 1.2% !important;
-}
-
-/* Ajuste refinado das anotações manuscritas apontando para os equipamentos corretos */
+/* Ajuste refinado das anotações manuscritas apontando harmoniosamente para cada cluster */
 @media screen and (min-width: 992px) {
   .sequence-final-signature:not(.is-second):not(.is-first-arrow):not(.is-second-arrow) {
-    bottom: 14.8em !important;
-    left: 10.5em !important;
-    width: 8em !important;
-    rotate: -8deg !important;
+    bottom: 21.8em !important;
+    left: 13.8% !important;
+    width: 9.2em !important;
+    rotate: -7deg !important;
   }
   .sequence-final-signature.is-first-arrow {
-    bottom: 11.2em !important;
-    left: 13.8em !important;
-    width: 3.5em !important;
-    rotate: 15deg !important;
+    bottom: 18.2em !important;
+    left: 17.2% !important;
+    width: 3.8em !important;
+    rotate: 22deg !important;
   }
   .sequence-final-signature.is-second {
-    bottom: 14.8em !important;
-    right: 11em !important;
+    bottom: 21.2em !important;
+    right: 14.2% !important;
     left: auto !important;
-    width: 9.5em !important;
+    width: 10.6em !important;
     rotate: 5deg !important;
   }
   .sequence-final-signature.is-second-arrow {
-    bottom: 11.2em !important;
-    right: 14.2em !important;
+    bottom: 17.2em !important;
+    right: 18.2% !important;
     left: auto !important;
-    width: 3.2em !important;
-    rotate: -90deg !important;
+    width: 3.5em !important;
+    rotate: -85deg !important;
   }
 }
 
