@@ -114,34 +114,14 @@ export function DailyMeals() {
                 </svg>
               </div>
             </div>
-            <div data-inertia-item="" className="flavour-left-dose">
+            <div data-inertia-item="" className="flavour-left-dose is-composite-art">
               <img
-                src="/assets/images/projects/proj-01-digital-twin.webp"
-                width={925}
-                height={600}
+                src="/assets/images/projects/digital-twin-composite.webp"
+                width={1437}
+                height={840}
                 alt={INTERACTIVE_SHOWCASE.projectName}
                 data-inertia-item-child=""
-                className="flavour-left-dose-img"
-                style={{
-                  borderRadius: "0.5em",
-                  boxShadow: "0 1em 2.5em rgba(7,24,39,0.22)",
-                }}
-              />
-            </div>
-            <div data-inertia-item="" className="flavour-left-pack is-first">
-              <img
-                src="/assets/images/elements/elem-solar-module.webp"
-                alt=""
-                data-inertia-item-child=""
-                className="flavour-left-pack-img"
-              />
-            </div>
-            <div data-inertia-item="" className="flavour-left-pack is-second">
-              <img
-                src="/assets/images/elements/elem-bess-unit.webp"
-                alt=""
-                data-inertia-item-child=""
-                className="flavour-left-pack-img"
+                className="flavour-left-dose-img is-composite-img"
               />
             </div>
           </div>
