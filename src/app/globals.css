@@ -1114,13 +1114,18 @@ html, body {
 /* 10.1 Fundo com Degradê Cinematográfico e Transição Suave na Dobra de Sites (#projetos) */
 #projetos.testimonial-section {
   position: relative;
-  overflow: hidden;
+  height: auto !important;
+  min-height: 85em !important;
+  padding-bottom: 4.5em !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
   background-color: #071827;
 }
 #projetos .bg-img-wrapper {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 #projetos .projects-bg-main {
   width: 100% !important;
@@ -1154,6 +1159,8 @@ html, body {
 #projetos .testimonial-container {
   position: relative;
   z-index: 2;
+  height: auto !important;
+  padding-bottom: 2.5em !important;
 }
 #projetos .testimonial-big-heading,
 #projetos .testimonial-heading {
