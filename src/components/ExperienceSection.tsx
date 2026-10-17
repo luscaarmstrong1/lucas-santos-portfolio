@@ -60,7 +60,6 @@ export function ExperienceSection() {
               <div key={group.category} className="skill-cat-card">
                 <div className="skill-cat-top">
                   <span className="skill-cat-code">{group.code}</span>
-                  <span className="skill-cat-count">{group.items.length} competências</span>
                 </div>
                 <h4 className="skill-cat-title">{group.category}</h4>
                 <div className="skill-cat-line" />
