@@ -842,6 +842,9 @@ html, body {
 }
 
 /* 6.1 Assinatura Manuscrita do Card de Automação & Software */
+.sequence-cards {
+  overflow: visible !important;
+}
 .statement-card.is-fourth {
   overflow: visible !important;
 }
@@ -851,14 +854,14 @@ html, body {
 }
 .card-side-handwriting {
   position: absolute;
-  top: 48%;
+  top: 45%;
   left: 104%;
   transform: translateY(-50%);
   width: 14em;
   color: var(--dark-green);
   pointer-events: none;
   display: grid;
-  z-index: 10;
+  z-index: 20;
 }
 .card-side-handwriting-svg {
   grid-area: 1 / 1;
