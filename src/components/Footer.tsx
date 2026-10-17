@@ -71,26 +71,6 @@ export function Footer() {
                   <div className="shipping-link-text">Projetos em destaque</div>
                 </div>
               </a>
-              <a
-                href={SITE.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shipping-link w-inline-block"
-              >
-                <div className="shipping-link-wrap">
-                  <div className="shipping-link-text">LinkedIn</div>
-                </div>
-              </a>
-              <a
-                href={SITE.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shipping-link w-inline-block"
-              >
-                <div className="shipping-link-wrap">
-                  <div className="shipping-link-text">GitHub</div>
-                </div>
-              </a>
               <a href={SITE.contato} className="shipping-link w-inline-block">
                 <div className="shipping-link-wrap">
                   <div className="shipping-link-text">Briefing &amp; Contato</div>
