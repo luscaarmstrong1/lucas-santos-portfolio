@@ -52,17 +52,14 @@ export function Comparison() {
             id="w-node-_6f3e86b5-5cf7-4a62-19af-d6d71a8517d6-0ac01850"
             className="img-wrapper methodology-img-wrapper"
           >
-            <div className="methodology-card-frame">
-              <img
-                src="/assets/images/methodology-office.webp"
-                alt="Ambiente de engenharia integrado, dados e automação com laptop e simulação"
-                className="methodology-main-img"
-                loading="lazy"
-                width={576}
-                height={1024}
-              />
-              <div className="methodology-card-glare" aria-hidden="true" />
-            </div>
+            <img
+              src="/assets/images/methodology-office.webp"
+              alt="Ambiente integrado de engenharia, dados e automação com fluxo de diagnóstico, modelagem, implementação e validação"
+              className="img methodology-main-img"
+              loading="lazy"
+              width={941}
+              height={1672}
+            />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -90,29 +87,6 @@ export function Comparison() {
               <br />
               É preciso conectar as soluções.
             </h2>
-
-            <div className="methodology-stages-bar" aria-label="Processo metodológico em 4 etapas">
-              <div className="methodology-stage-pill">
-                <span className="stage-num">01</span>
-                <strong>Diagnóstico</strong>
-                <p>Levantamento regulatório e técnico</p>
-              </div>
-              <div className="methodology-stage-pill">
-                <span className="stage-num">02</span>
-                <strong>Modelagem</strong>
-                <p>Simulação analítica e viabilidade</p>
-              </div>
-              <div className="methodology-stage-pill">
-                <span className="stage-num">03</span>
-                <strong>Implementação</strong>
-                <p>Engenharia executiva e automação</p>
-              </div>
-              <div className="methodology-stage-pill">
-                <span className="stage-num">04</span>
-                <strong>Validação</strong>
-                <p>Conformidade e entrega contínua</p>
-              </div>
-            </div>
 
             <div
               data-benefit-table=""
