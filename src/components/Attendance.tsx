@@ -1,9 +1,65 @@
 import React from "react";
 
+const EQUIPMENT_ITEMS = [
+  {
+    key: "inverter",
+    src: "/assets/images/elements/elem-inverter.webp",
+    width: 183,
+    height: 174,
+    alt: "Inversor Solar Industrial",
+    label: "Inversor Solar",
+    className: "sequence-element-item elem-inverter",
+  },
+  {
+    key: "transformer",
+    src: "/assets/images/elements/elem-transformer.webp",
+    width: 152,
+    height: 143,
+    alt: "Transformador de Subestação",
+    label: "Subestação & Potência",
+    className: "sequence-element-item elem-transformer",
+  },
+  {
+    key: "ev-charger",
+    src: "/assets/images/elements/elem-ev-charger.webp",
+    width: 101,
+    height: 162,
+    alt: "Estação de Recarga Veicular Elétrica",
+    label: "Eletromobilidade",
+    className: "sequence-element-item elem-ev-charger",
+  },
+  {
+    key: "workstation",
+    src: "/assets/images/elements/elem-workstation.webp",
+    width: 191,
+    height: 174,
+    alt: "Workstation de Engenharia e Simulação",
+    label: "Engenharia & Dados",
+    className: "sequence-element-item elem-workstation",
+  },
+  {
+    key: "plc",
+    src: "/assets/images/elements/elem-plc.webp",
+    width: 158,
+    height: 116,
+    alt: "Controlador Lógico Programável CLP",
+    label: "Automação & CLP",
+    className: "sequence-element-item elem-plc",
+  },
+  {
+    key: "server-rack",
+    src: "/assets/images/elements/elem-server-rack.webp",
+    width: 156,
+    height: 128,
+    alt: "Racks de Servidores e Datacenter",
+    label: "Infra & Cloud IA",
+    className: "sequence-element-item elem-server-rack",
+  },
+];
+
 export function Attendance({ mobile = false }: { mobile?: boolean }) {
   const wrapperClass = mobile ? "sequence-final-mobile" : "sequence-final";
-  const dataAttr = (name: string) =>
-    mobile ? {} : { [name]: "" };
+  const dataAttr = (name: string) => (mobile ? {} : { [name]: "" });
 
   return (
     <div className={wrapperClass}>
@@ -194,57 +250,55 @@ export function Attendance({ mobile = false }: { mobile?: boolean }) {
           />
         </svg>
       </div>
-      {!mobile && (
+
+      {!mobile ? (
         <div className="sequence-final-elements" aria-hidden="true">
-          <img
-            src="/assets/images/elements/elem-inverter.webp"
-            width={183}
-            height={174}
-            alt="Inversor Solar Industrial"
-            data-sequence-elem="inverter"
-            className="sequence-element-item elem-inverter"
-          />
-          <img
-            src="/assets/images/elements/elem-transformer.webp"
-            width={152}
-            height={143}
-            alt="Transformador de Subestação"
-            data-sequence-elem="transformer"
-            className="sequence-element-item elem-transformer"
-          />
-          <img
-            src="/assets/images/elements/elem-ev-charger.webp"
-            width={101}
-            height={162}
-            alt="Estação de Recarga Veicular Elétrica"
-            data-sequence-elem="ev-charger"
-            className="sequence-element-item elem-ev-charger"
-          />
-          <img
-            src="/assets/images/elements/elem-workstation.webp"
-            width={191}
-            height={174}
-            alt="Workstation de Engenharia e Simulação"
-            data-sequence-elem="workstation"
-            className="sequence-element-item elem-workstation"
-          />
-          <img
-            src="/assets/images/elements/elem-plc.webp"
-            width={158}
-            height={116}
-            alt="Controlador Lógico Programável CLP"
-            data-sequence-elem="plc"
-            className="sequence-element-item elem-plc"
-          />
-          <img
-            src="/assets/images/elements/elem-server-rack.webp"
-            width={156}
-            height={128}
-            alt="Racks de Servidores e Datacenter"
-            data-sequence-elem="server-rack"
-            className="sequence-element-item elem-server-rack"
-          />
+          {EQUIPMENT_ITEMS.map((item) => (
+            <img
+              key={item.key}
+              src={item.src}
+              width={item.width}
+              height={item.height}
+              alt={item.alt}
+              data-sequence-elem={item.key}
+              className={item.className}
+            />
+          ))}
         </div>
+      ) : (
+        <>
+          <div className="sequence-mobile-hero-photo">
+            <img
+              src="/assets/images/solar-engineering.webp"
+              alt="Ambiente de trabalho e engenharia de projetos de Lucas Santos"
+              width={1024}
+              height={682}
+              loading="lazy"
+            />
+          </div>
+          <div
+            className="sequence-mobile-elements-grid"
+            aria-label="Equipamentos e soluções de engenharia, energia, dados e automação"
+          >
+            {EQUIPMENT_ITEMS.map((item) => (
+              <div
+                key={item.key}
+                data-sequence-mobile-elem=""
+                className={`sequence-mobile-elem-card is-${item.key}`}
+              >
+                <img
+                  src={item.src}
+                  width={item.width}
+                  height={item.height}
+                  alt={item.alt}
+                  loading="lazy"
+                  className="sequence-mobile-elem-img"
+                />
+                <span className="sequence-mobile-elem-label">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </>
       )}
     </div>
   );

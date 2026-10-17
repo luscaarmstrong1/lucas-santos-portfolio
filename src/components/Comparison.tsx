@@ -74,6 +74,32 @@ export function Comparison() {
             </h2>
 
             <div
+              className="methodology-stages-bar"
+              aria-label="Etapas da metodologia integrada"
+            >
+              <div className="methodology-stage-pill">
+                <span className="stage-num">01</span>
+                <strong>Diagnóstico</strong>
+                <p>Levantamento técnico, normas e restrições operacionais.</p>
+              </div>
+              <div className="methodology-stage-pill">
+                <span className="stage-num">02</span>
+                <strong>Modelagem</strong>
+                <p>Simulação de cenários, dados e viabilidade energética.</p>
+              </div>
+              <div className="methodology-stage-pill">
+                <span className="stage-num">03</span>
+                <strong>Implementação</strong>
+                <p>Engenharia executiva, automação e integração de software.</p>
+              </div>
+              <div className="methodology-stage-pill">
+                <span className="stage-num">04</span>
+                <strong>Validação</strong>
+                <p>Homologação, métricas de performance e entrega assistida.</p>
+              </div>
+            </div>
+
+            <div
               data-benefit-table=""
               className="benefit-table"
               role="table"

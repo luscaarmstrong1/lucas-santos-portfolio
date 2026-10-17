@@ -554,22 +554,44 @@ export function Effects() {
         });
         const finalMob = queryOne(".sequence-final-mobile", seq);
         const mobSigs = finalMob ? queryAll(".sequence-final-signature", finalMob) : [];
-        if (finalMob && mobSigs.length) {
-          gsap.set(mobSigs, { opacity: 0, y: 24 });
+        const mobElems = finalMob ? queryAll("[data-sequence-mobile-elem]", finalMob) : [];
+        if (finalMob && (mobSigs.length || mobElems.length)) {
+          if (mobSigs.length) gsap.set(mobSigs, { opacity: 0, y: 20 });
+          if (mobElems.length) gsap.set(mobElems, { opacity: 0, y: 24, scale: 0.92 });
           ScrollTrigger.create({
             trigger: finalMob,
-            start: "bottom 106%",
-            onEnter: () =>
-              void gsap.to(mobSigs, {
-                opacity: 1,
-                y: 0,
-                ease: "elastic-ease-out-soft",
-                duration: 0.8,
-                stagger: 0.06,
-                overwrite: true,
-              }),
-            onLeaveBack: () =>
-              void gsap.to(mobSigs, { opacity: 0, y: 24, duration: 0.25, overwrite: true }),
+            start: "top 82%",
+            onEnter: () => {
+              if (mobSigs.length) {
+                gsap.to(mobSigs, {
+                  opacity: 1,
+                  y: 0,
+                  ease: "elastic-ease-out-soft",
+                  duration: 0.75,
+                  stagger: 0.06,
+                  overwrite: true,
+                });
+              }
+              if (mobElems.length) {
+                gsap.to(mobElems, {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  ease: "elastic-ease-out-soft",
+                  duration: 0.8,
+                  stagger: 0.06,
+                  overwrite: true,
+                });
+              }
+            },
+            onLeaveBack: () => {
+              if (mobSigs.length) {
+                gsap.to(mobSigs, { opacity: 0, y: 20, duration: 0.25, overwrite: true });
+              }
+              if (mobElems.length) {
+                gsap.to(mobElems, { opacity: 0, y: 24, scale: 0.92, duration: 0.25, overwrite: true });
+              }
+            },
           });
         }
         gsap.set(canvas, { transformOrigin: "center bottom" });
@@ -925,27 +947,43 @@ export function Effects() {
       rightBtn?.addEventListener("click", onRight);
 
       let startX = 0;
+      let startY = 0;
       let startPos = 0;
       let dragged = false;
       let pointerDown = false;
+      let gestureAxis: "x" | "y" | null = null;
 
       const onPointerDown = (ev: PointerEvent) => {
+        if (ev.pointerType === "mouse" && ev.button !== 0) return;
         pointerDown = true;
         dragged = false;
+        gestureAxis = null;
         startX = ev.clientX;
+        startY = ev.clientY;
         startPos = state.pos;
         gsap.killTweensOf(state);
       };
       const onPointerMove = (ev: PointerEvent) => {
         if (!pointerDown) return;
-        const delta = ev.clientX - startX;
-        if (Math.abs(delta) > 6) dragged = true;
-        state.pos = startPos - delta / itemWidth;
+        const deltaX = ev.clientX - startX;
+        const deltaY = ev.clientY - startY;
+        if (!gestureAxis) {
+          if (Math.abs(deltaX) < 6 && Math.abs(deltaY) < 6) return;
+          gestureAxis = Math.abs(deltaX) >= Math.abs(deltaY) ? "x" : "y";
+          if (gestureAxis === "y") {
+            pointerDown = false;
+            animateTo(Math.round(state.pos));
+            return;
+          }
+        }
+        if (Math.abs(deltaX) > 6) dragged = true;
+        state.pos = startPos - deltaX / itemWidth;
         updateSlider();
       };
       const onPointerUp = () => {
         if (pointerDown) {
           pointerDown = false;
+          gestureAxis = null;
           animateTo(Math.round(state.pos));
         }
       };

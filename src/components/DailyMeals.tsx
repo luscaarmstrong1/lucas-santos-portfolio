@@ -12,10 +12,11 @@ const PACK_IMAGES = [
 export function DailyMeals() {
   return (
     <section data-inertia="" className="flavour" id="arquitetura">
+      <span id="simuladores" style={{ position: "absolute", top: 0 }} aria-hidden="true" />
       <div className="flavour-container">
         <div className="flavour-header">
           <div className="flavour-heading-wrap">
-            <h2 className="flavour-title" style={{ fontSize: "10em" }}>
+            <h2 className="flavour-title">
               {INTERACTIVE_SHOWCASE.sectionTitle}
             </h2>
             <h3 data-highlight-text="" className="flavour-subline">

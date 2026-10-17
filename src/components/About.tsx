@@ -1,8 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { EDUCATION, SITE } from "@/config/site";
 import { GitHubIcon, LinkedInIcon } from "./icons";
 
 export function About() {
+  const [activeCard, setActiveCard] = useState<number>(2);
+
   return (
     <div data-inertia="" className="insider-section" id="sobre">
       <div className="insider-container">
@@ -29,7 +33,19 @@ export function About() {
             >
               <div
                 data-inertia-item=""
-                className="testimonial-inner-wrap is-first deck-card"
+                role="button"
+                tabIndex={0}
+                aria-pressed={activeCard === 1}
+                onClick={() => setActiveCard(1)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setActiveCard(1);
+                  }
+                }}
+                className={`testimonial-inner-wrap is-first deck-card${
+                  activeCard === 1 ? " is-touch-active" : ""
+                }`}
               >
                 <div data-inertia-item-child="" className="testimonial-inner _1">
                   <img
@@ -45,7 +61,19 @@ export function About() {
               </div>
               <div
                 data-inertia-item=""
-                className="testimonial-inner-wrap is-second deck-card"
+                role="button"
+                tabIndex={0}
+                aria-pressed={activeCard === 2}
+                onClick={() => setActiveCard(2)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setActiveCard(2);
+                  }
+                }}
+                className={`testimonial-inner-wrap is-second deck-card${
+                  activeCard === 2 ? " is-touch-active" : ""
+                }`}
               >
                 <div data-inertia-item-child="" className="testimonial-inner _2">
                   <img
@@ -61,7 +89,19 @@ export function About() {
               </div>
               <div
                 data-inertia-item=""
-                className="testimonial-inner-wrap is-third deck-card"
+                role="button"
+                tabIndex={0}
+                aria-pressed={activeCard === 3}
+                onClick={() => setActiveCard(3)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setActiveCard(3);
+                  }
+                }}
+                className={`testimonial-inner-wrap is-third deck-card${
+                  activeCard === 3 ? " is-touch-active" : ""
+                }`}
               >
                 <div data-inertia-item-child="" className="testimonial-inner _3">
                   <img

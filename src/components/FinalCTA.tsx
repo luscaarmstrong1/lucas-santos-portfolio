@@ -17,7 +17,7 @@ export function FinalCTA() {
         <div className="footer-img footer-img-fundo" />
       </div>
       <div className="footer-product-text-inner">
-        <h3 className="footer-product-heading" style={{ fontSize: "5.25em" }}>
+        <h3 className="footer-product-heading">
           Vamos construir a
           <br />
           próxima solução?
