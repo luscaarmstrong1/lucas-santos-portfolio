@@ -888,14 +888,14 @@ html, body {
 }
 .card-side-handwriting {
   position: absolute;
-  top: 45%;
-  left: 104%;
+  top: 36%;
+  left: calc(100% + 22vw);
   transform: translateY(-50%);
-  width: 14em;
+  width: 15em;
   color: var(--dark-green);
   pointer-events: none;
   display: grid;
-  z-index: 20;
+  z-index: 50;
 }
 .card-side-handwriting-svg {
   grid-area: 1 / 1;
