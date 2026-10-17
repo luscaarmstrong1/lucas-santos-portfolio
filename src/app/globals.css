@@ -809,36 +809,70 @@ html, body {
   position: relative !important;
   z-index: 10 !important;
 }
-.sequence-final-cookie,
-.sequence-final-strawberry {
-  z-index: 1 !important;
-  pointer-events: none !important;
-  opacity: 0.95 !important;
-  filter: drop-shadow(0 1.2em 2.5em rgba(7, 24, 39, 0.45));
+.sequence-element-item {
+  position: absolute !important;
+  z-index: 5 !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+  cursor: pointer !important;
+  opacity: 0.98;
+  filter: drop-shadow(0 14px 28px rgba(7, 24, 39, 0.28));
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.38s ease;
+  will-change: transform, filter;
 }
-.sequence-final-cookie {
-  width: 9em !important;
-  height: 9em !important;
+
+.sequence-element-item:hover {
+  transform: scale(1.08) translateY(-8px) !important;
+  filter: drop-shadow(0 22px 36px rgba(7, 24, 39, 0.42)) brightness(1.03) !important;
+  z-index: 15 !important;
+}
+
+/* Quadrante Superior-Esquerdo: Inversor Solar */
+.sequence-element-item.elem-inverter {
+  width: 11.5em !important;
+  height: auto !important;
+  top: 14% !important;
+  left: 2.5% !important;
+}
+
+/* Quadrante Inferior-Esquerdo (Extremo): Transformador de Subestação */
+.sequence-element-item.elem-transformer {
+  width: 10em !important;
+  height: auto !important;
   bottom: 2.5em !important;
-  left: 4% !important;
+  left: 1.5% !important;
 }
-.sequence-final-cookie.is-second {
-  width: 13.5em !important;
-  height: 13.5em !important;
-  bottom: 22em !important;
-  left: 3% !important;
+
+/* Quadrante Inferior-Esquerdo (Interno): Carregador Veicular EV */
+.sequence-element-item.elem-ev-charger {
+  width: 7.2em !important;
+  height: auto !important;
+  bottom: 3.5em !important;
+  left: 17.5% !important;
 }
-.sequence-final-strawberry {
-  width: 9em !important;
-  height: 9em !important;
+
+/* Quadrante Superior-Direito: Workstation & Monitores */
+.sequence-element-item.elem-workstation {
+  width: 12.5em !important;
+  height: auto !important;
+  top: 14% !important;
+  right: 2.5% !important;
+}
+
+/* Quadrante Inferior-Direito (Interno): CLP Automação Industrial */
+.sequence-element-item.elem-plc {
+  width: 10.5em !important;
+  height: auto !important;
+  bottom: 3.5em !important;
+  right: 17% !important;
+}
+
+/* Quadrante Inferior-Direito (Extremo): Racks de Servidor */
+.sequence-element-item.elem-server-rack {
+  width: 10.5em !important;
+  height: auto !important;
   bottom: 2.5em !important;
-  right: 4% !important;
-}
-.sequence-final-strawberry.is-second {
-  width: 13.5em !important;
-  height: 13.5em !important;
-  bottom: 22em !important;
-  right: 3% !important;
+  right: 1.5% !important;
 }
 
 /* 6.1 Assinatura Manuscrita do Card de Automação & Software */

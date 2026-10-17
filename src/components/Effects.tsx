@@ -287,10 +287,13 @@ export function Effects() {
       const innerSig = queryOne("[data-sequence-signature]", seq);
       const titleSplitEl = queryOne("[data-sequence-title-split]", seq);
       const finalSigs = queryAll("[data-sequence-final-signature]", seq);
-      const cookie1 = queryOne("[data-sequence-cookie-first]", seq);
-      const cookie2 = queryOne("[data-sequence-cookie-second]", seq);
-      const straw1 = queryOne("[data-sequence-strawberry-first]", seq);
-      const straw2 = queryOne("[data-sequence-strawberry-second]", seq);
+      const elemInverter = queryOne("[data-sequence-elem='inverter']", seq);
+      const elemTransformer = queryOne("[data-sequence-elem='transformer']", seq);
+      const elemEvCharger = queryOne("[data-sequence-elem='ev-charger']", seq);
+      const elemWorkstation = queryOne("[data-sequence-elem='workstation']", seq);
+      const elemPlc = queryOne("[data-sequence-elem='plc']", seq);
+      const elemServerRack = queryOne("[data-sequence-elem='server-rack']", seq);
+      const allSequenceElements = queryAll(".sequence-element-item", seq);
 
       mm.add("(min-width: 992px)", () => {
         const splitWords = titleSplitEl
@@ -377,10 +380,12 @@ export function Effects() {
         gsap.set(innerSig, { opacity: 0 });
         gsap.set(title, { y: h, scale: 0.7 });
         gsap.set(finalSigs, { y: h });
-        gsap.set(cookie1, { y: h, x: 64 });
-        gsap.set(cookie2, { y: h, x: 96 });
-        gsap.set(straw1, { y: h, x: -64 });
-        gsap.set(straw2, { y: h, x: -96 });
+        if (elemInverter) gsap.set(elemInverter, { y: h, x: -40 });
+        if (elemTransformer) gsap.set(elemTransformer, { y: h, x: -70 });
+        if (elemEvCharger) gsap.set(elemEvCharger, { y: h, x: -50 });
+        if (elemWorkstation) gsap.set(elemWorkstation, { y: h, x: 40 });
+        if (elemPlc) gsap.set(elemPlc, { y: h, x: 50 });
+        if (elemServerRack) gsap.set(elemServerRack, { y: h, x: 70 });
 
         mainTl
           .to(
@@ -407,11 +412,15 @@ export function Effects() {
             { y: 0, scale: 0.9, duration: 1.5, ease: "expoScale(0.5,7,power2.out)" },
             ">+=.2"
           )
-          .to(finalSigs, { y: 0, duration: 1, ease: "power1.inOut" }, "<")
-          .to(cookie1, { y: 0, x: 0, duration: 1.25, ease: "power1.inOut" }, "<")
-          .to(straw1, { y: 0, x: 0, duration: 1.25, ease: "power1.inOut" }, "<")
-          .to(cookie2, { y: 0, x: 0, duration: 1.5, ease: "power1.inOut" }, "<")
-          .to(straw2, { y: 0, x: 0, duration: 1.5, ease: "power1.inOut" }, "<");
+          .to(finalSigs, { y: 0, duration: 1, ease: "power1.inOut" }, "<");
+
+        if (allSequenceElements.length) {
+          mainTl.to(
+            allSequenceElements,
+            { y: 0, x: 0, duration: 1.35, stagger: 0.08, ease: "power1.inOut" },
+            "<"
+          );
+        }
 
         mainTl.to(
           smileys,
@@ -480,64 +489,56 @@ export function Effects() {
             );
         }
 
-        fruitsTl
-          .from(finalSigs, { opacity: 0, duration: 0.2, ease: "none" }, "step")
-          .fromTo(
-            cookie1,
-            { opacity: 0, xPercent: 75, yPercent: 80, scale: 0.5, rotate: -140 },
-            {
-              opacity: 1,
-              xPercent: 0,
-              yPercent: 0,
-              scale: 1,
-              rotate: -90,
-              ease: "elastic-ease-out-soft",
-              duration: 0.8,
-            },
-            "step+=0.08"
-          )
-          .fromTo(
-            straw1,
-            { opacity: 0, xPercent: -50, yPercent: 90, scale: 0.5, rotate: 40 },
-            {
-              opacity: 1,
-              xPercent: 0,
-              yPercent: 0,
-              scale: 1,
-              rotate: -6,
-              ease: "elastic-ease-out-soft",
-              duration: 0.8,
-            },
-            "step+=0.08"
-          )
-          .fromTo(
-            cookie2,
-            { opacity: 0, xPercent: 50, yPercent: 75, scale: 0.5, rotate: -75 },
-            {
-              opacity: 1,
-              xPercent: 0,
-              yPercent: 0,
-              scale: 1,
-              rotate: 0,
-              ease: "elastic-ease-out-soft",
-              duration: 1.15,
-            },
-            "step+=0.16"
-          )
-          .fromTo(
-            straw2,
-            { opacity: 0, xPercent: -50, yPercent: 50, scale: 0.5, rotate: -75 },
-            {
-              opacity: 1,
-              xPercent: 0,
-              yPercent: 0,
-              scale: 1,
-              rotate: -23,
-              ease: "elastic-ease-out-soft",
-              duration: 1.15,
-            },
+        fruitsTl.from(finalSigs, { opacity: 0, duration: 0.2, ease: "none" }, "step");
+
+        if (elemInverter) {
+          fruitsTl.fromTo(
+            elemInverter,
+            { opacity: 0, xPercent: -35, yPercent: 40, scale: 0.65, rotate: -15 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 0.9 },
+            "step+=0.06"
+          );
+        }
+        if (elemTransformer) {
+          fruitsTl.fromTo(
+            elemTransformer,
+            { opacity: 0, xPercent: -45, yPercent: 60, scale: 0.65, rotate: -10 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 1.0 },
+            "step+=0.1"
+          );
+        }
+        if (elemEvCharger) {
+          fruitsTl.fromTo(
+            elemEvCharger,
+            { opacity: 0, xPercent: -25, yPercent: 50, scale: 0.65, rotate: 8 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 1.1 },
+            "step+=0.14"
+          );
+        }
+        if (elemWorkstation) {
+          fruitsTl.fromTo(
+            elemWorkstation,
+            { opacity: 0, xPercent: 35, yPercent: 40, scale: 0.65, rotate: 12 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 0.9 },
+            "step+=0.06"
+          );
+        }
+        if (elemPlc) {
+          fruitsTl.fromTo(
+            elemPlc,
+            { opacity: 0, xPercent: 30, yPercent: 50, scale: 0.65, rotate: -8 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 1.05 },
+            "step+=0.12"
+          );
+        }
+        if (elemServerRack) {
+          fruitsTl.fromTo(
+            elemServerRack,
+            { opacity: 0, xPercent: 45, yPercent: 60, scale: 0.65, rotate: 10 },
+            { opacity: 1, xPercent: 0, yPercent: 0, scale: 1, rotate: 0, ease: "elastic-ease-out-soft", duration: 1.15 },
             "step+=0.16"
           );
+        }
       });
 
       mm.add("(max-width: 991px)", () => {

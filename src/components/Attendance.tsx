@@ -195,40 +195,56 @@ export function Attendance({ mobile = false }: { mobile?: boolean }) {
         </svg>
       </div>
       {!mobile && (
-        <>
+        <div className="sequence-final-elements" aria-hidden="true">
           <img
-            src="/assets/images/elements/elem-solar-module.webp"
-            width={340}
-            height={340}
-            alt=""
-            data-sequence-cookie-first=""
-            className="sequence-final-cookie"
+            src="/assets/images/elements/elem-inverter.webp"
+            width={183}
+            height={174}
+            alt="Inversor Solar Industrial"
+            data-sequence-elem="inverter"
+            className="sequence-element-item elem-inverter"
           />
           <img
-            src="/assets/images/elements/elem-grid-node.webp"
-            width={340}
-            height={340}
-            alt=""
-            data-sequence-cookie-second=""
-            className="sequence-final-cookie is-second"
+            src="/assets/images/elements/elem-transformer.webp"
+            width={152}
+            height={143}
+            alt="Transformador de Subestação"
+            data-sequence-elem="transformer"
+            className="sequence-element-item elem-transformer"
           />
           <img
-            src="/assets/images/elements/elem-pcb-node.webp"
-            width={420}
-            height={420}
-            alt=""
-            data-sequence-strawberry-first=""
-            className="sequence-final-strawberry"
+            src="/assets/images/elements/elem-ev-charger.webp"
+            width={101}
+            height={162}
+            alt="Estação de Recarga Veicular Elétrica"
+            data-sequence-elem="ev-charger"
+            className="sequence-element-item elem-ev-charger"
           />
           <img
-            src="/assets/images/elements/elem-bess-unit.webp"
-            width={420}
-            height={420}
-            alt=""
-            data-sequence-strawberry-second=""
-            className="sequence-final-strawberry is-second"
+            src="/assets/images/elements/elem-workstation.webp"
+            width={191}
+            height={174}
+            alt="Workstation de Engenharia e Simulação"
+            data-sequence-elem="workstation"
+            className="sequence-element-item elem-workstation"
           />
-        </>
+          <img
+            src="/assets/images/elements/elem-plc.webp"
+            width={158}
+            height={116}
+            alt="Controlador Lógico Programável CLP"
+            data-sequence-elem="plc"
+            className="sequence-element-item elem-plc"
+          />
+          <img
+            src="/assets/images/elements/elem-server-rack.webp"
+            width={156}
+            height={128}
+            alt="Racks de Servidores e Datacenter"
+            data-sequence-elem="server-rack"
+            className="sequence-element-item elem-server-rack"
+          />
+        </div>
       )}
     </div>
   );
