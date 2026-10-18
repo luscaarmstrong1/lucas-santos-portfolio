@@ -58,7 +58,7 @@ export function Comparison() {
               className="img methodology-main-img"
               loading="lazy"
               width={1011}
-              height={2436}
+              height={1450}
             />
           </div>
           <div

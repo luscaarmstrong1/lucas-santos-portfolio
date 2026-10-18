@@ -1784,7 +1784,7 @@ body.has-mobile-menu-open {
   }
 }
 
-/* 13. Imagem Lateral da Seção de Metodologia e Abordagem */
+/* 13. Imagem Lateral e Tabela da Seção de Metodologia e Abordagem (#diferenca) */
 .methodology-img-wrapper {
   position: relative !important;
   display: flex !important;
@@ -1818,11 +1818,28 @@ body.has-mobile-menu-open {
   pointer-events: none !important;
 }
 
+#diferenca .benefit-wrapper {
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+  row-gap: 2rem !important;
+  grid-row-gap: 2rem !important;
+  height: auto !important;
+}
+
 @media screen and (max-width: 991px) {
   .methodology-img-wrapper {
-    min-height: 22rem !important;
-    max-height: 32rem !important;
+    min-height: 20rem !important;
+    max-height: 28rem !important;
     padding: 0 1rem 1rem !important;
+  }
+
+  #diferenca .benefit-wrapper {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2rem !important;
+    row-gap: 1.5rem !important;
+    grid-row-gap: 1.5rem !important;
   }
 }
 
