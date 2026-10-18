@@ -23,9 +23,6 @@ export function DailyMeals() {
               {INTERACTIVE_SHOWCASE.sectionSubtitle}
             </h3>
           </div>
-          <p className="flavour-paragraph" style={{ maxWidth: "46ch" }}>
-            {INTERACTIVE_SHOWCASE.projectName}: {INTERACTIVE_SHOWCASE.disclaimer}
-          </p>
         </div>
 
         <div className="flavour-layer-pills" role="tablist" aria-label="Projetos e camadas de engenharia">
