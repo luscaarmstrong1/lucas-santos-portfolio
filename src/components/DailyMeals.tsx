@@ -130,8 +130,8 @@ export function DailyMeals() {
             <div data-inertia-item="" className="flavour-left-dose is-composite-art">
               <img
                 src="/assets/images/projects/digital-twin-composite.webp"
-                width={1437}
-                height={840}
+                width={1448}
+                height={1024}
                 alt={INTERACTIVE_SHOWCASE.projectName}
                 data-inertia-item-child=""
                 className="flavour-left-dose-img is-composite-img"
