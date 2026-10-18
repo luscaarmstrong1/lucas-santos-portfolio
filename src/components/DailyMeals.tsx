@@ -23,9 +23,24 @@ export function DailyMeals() {
               {INTERACTIVE_SHOWCASE.sectionSubtitle}
             </h3>
           </div>
-          <p className="flavour-paragraph" style={{ maxWidth: "42ch" }}>
+          <p className="flavour-paragraph" style={{ maxWidth: "46ch" }}>
             {INTERACTIVE_SHOWCASE.projectName}: {INTERACTIVE_SHOWCASE.disclaimer}
           </p>
+        </div>
+
+        <div className="flavour-layer-pills" role="tablist" aria-label="Projetos e camadas de engenharia">
+          {INTERACTIVE_SHOWCASE.stages.map((stage, idx) => (
+            <button
+              key={stage.id}
+              type="button"
+              role="tab"
+              aria-selected={idx === 0}
+              data-flavour-pill={idx}
+              className={`flavour-layer-pill${idx === 0 ? " is-active" : ""}`}
+            >
+              {stage.shortNavLabel}
+            </button>
+          ))}
         </div>
 
         <div data-flavour-content="" className="flavour-content">
@@ -47,10 +62,10 @@ export function DailyMeals() {
                     fontSize={29}
                   >
                     <text x={0} y={38}>
-                      análise preditiva
+                      9 simuladores reais
                     </text>
                     <text x={18} y={68}>
-                      &amp; simulação em Python
+                      &amp; modelos em Python
                     </text>
                   </g>
                 </svg>
@@ -69,10 +84,10 @@ export function DailyMeals() {
                     fontSize={29}
                   >
                     <text x={0} y={38}>
-                      análise preditiva
+                      9 simuladores reais
                     </text>
                     <text x={18} y={68}>
-                      &amp; simulação em Python
+                      &amp; modelos em Python
                     </text>
                   </g>
                 </svg>
@@ -209,7 +224,7 @@ export function DailyMeals() {
               type="button"
               data-flavour-slider-left-button=""
               className="flavour-slider-button is-left"
-              aria-label="Etapa anterior"
+              aria-label="Projeto anterior"
             >
               <svg
                 viewBox="0 0 20 20"
@@ -231,7 +246,7 @@ export function DailyMeals() {
               type="button"
               data-flavour-slider-right-button=""
               className="flavour-slider-button is-right"
-              aria-label="Próxima etapa"
+              aria-label="Próximo projeto"
             >
               <svg
                 viewBox="0 0 20 20"
@@ -272,24 +287,33 @@ export function DailyMeals() {
                           {stage.titleLine2}
                         </h3>
                       </div>
-                      <p
-                        style={{
-                          fontSize: "1.35em",
-                          lineHeight: 1.05,
-                          textAlign: "center",
-                          maxWidth: "30ch",
-                          color: "var(--color-text-secondary)",
-                          margin: 0,
-                        }}
-                      >
+                      <p className="flavour-stage-description">
                         {stage.description}
                       </p>
-                      <ActionButton
-                        href={INTERACTIVE_SHOWCASE.githubUrl}
-                        label={INTERACTIVE_SHOWCASE.ctaLabel}
-                        variant="dark"
-                        external
-                      />
+                      <div className="flavour-tech-tags">
+                        {stage.technologies.map((tech) => (
+                          <span key={tech} className="flavour-tech-tag">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flavour-cta-group">
+                        <ActionButton
+                          href={stage.demoUrl}
+                          label={INTERACTIVE_SHOWCASE.demoCtaLabel}
+                          variant="dark"
+                          external
+                        />
+                        <a
+                          href={stage.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flavour-github-link"
+                        >
+                          <span>{INTERACTIVE_SHOWCASE.ctaLabel}</span>
+                          <span aria-hidden="true">↗</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 ))}

@@ -1984,4 +1984,155 @@ body.has-mobile-menu-open {
   }
 }
 
+/* 16. Ecossistema de 9 Camadas de Engenharia (#arquitetura / #simuladores) */
+.flavour-layer-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin: 0 auto 2.5rem;
+  max-width: 78rem;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 5;
+}
+
+.flavour-layer-pill {
+  appearance: none;
+  border: 1.5px solid rgba(7, 24, 39, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  color: var(--color-navy-deep, #071827);
+  font-family: var(--font-corpo, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.55rem 1rem;
+  min-height: 44px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.flavour-layer-pill:hover {
+  border-color: var(--color-gold-accent, #D3A15C);
+  background: rgba(7, 24, 39, 0.06);
+  transform: translateY(-1px);
+}
+
+.flavour-layer-pill.is-active {
+  background: var(--color-navy-deep, #071827);
+  color: var(--color-gold-accent, #D3A15C);
+  border-color: var(--color-gold-accent, #D3A15C);
+  box-shadow: 0 8px 20px rgba(7, 24, 39, 0.18);
+}
+
+.flavour-stage-metrics-badge {
+  display: inline-block;
+  margin-top: 0.55rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(7, 24, 39, 0.08);
+  border: 1px solid rgba(211, 161, 92, 0.45);
+  color: var(--color-navy-deep, #071827);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.flavour-stage-description {
+  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+  line-height: 1.32;
+  text-align: center;
+  max-width: 34ch;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.flavour-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  max-width: 36ch;
+}
+
+.flavour-tech-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(16, 43, 66, 0.08);
+  color: var(--color-navy-tech, #102B42);
+  border: 1px solid rgba(16, 43, 66, 0.14);
+}
+
+.flavour-cta-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  margin-top: 0.15rem;
+}
+
+.flavour-github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 46px;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-navy-deep, #071827);
+  border: 1.5px solid rgba(7, 24, 39, 0.24);
+  background: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s ease;
+}
+
+.flavour-github-link:hover {
+  background: var(--color-navy-deep, #071827);
+  color: var(--color-gold-accent, #D3A15C);
+  border-color: var(--color-gold-accent, #D3A15C);
+}
+
+@media screen and (max-width: 767px) {
+  .flavour-layer-pills {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.25rem 1rem 0.6rem;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+  .flavour-layer-pills::-webkit-scrollbar {
+    display: none;
+  }
+  .flavour-layer-pill {
+    flex: 0 0 auto;
+    font-size: 0.78rem;
+    padding: 0.5rem 0.9rem;
+  }
+  .flavour-cta-group {
+    flex-direction: column;
+  }
+}
+
+
 

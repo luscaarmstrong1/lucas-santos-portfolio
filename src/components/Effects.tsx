@@ -1062,7 +1062,7 @@ export function Effects() {
           nextEl: "[data-flavour-slider-right-button]",
           prevEl: "[data-flavour-slider-left-button]",
         },
-        initialSlide: 3,
+        initialSlide: 0,
       });
 
       const textSwiper = new Swiper("[data-flavour-content-slider]", {
@@ -1083,11 +1083,33 @@ export function Effects() {
             scale: 0.5,
           },
         },
-        initialSlide: 3,
+        initialSlide: 0,
       });
 
       visualSwiper.controller.control = textSwiper;
       textSwiper.controller.control = visualSwiper;
+
+      const pillButtons = queryAll<HTMLButtonElement>("[data-flavour-pill]");
+      const syncPills = () => {
+        const activeIdx = visualSwiper.realIndex ?? 0;
+        pillButtons.forEach((btn, idx) => {
+          const isActive = idx === activeIdx;
+          btn.classList.toggle("is-active", isActive);
+          btn.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+      };
+
+      visualSwiper.on("slideChange", syncPills);
+      pillButtons.forEach((btn) => {
+        const onClick = () => {
+          const idx = Number(btn.getAttribute("data-flavour-pill") || "0");
+          visualSwiper.slideToLoop(idx, 600);
+        };
+        btn.addEventListener("click", onClick);
+        cleanups.push(() => btn.removeEventListener("click", onClick));
+      });
+      syncPills();
+
       cleanups.push(() => {
         visualSwiper.destroy();
         textSwiper.destroy();
@@ -1101,7 +1123,6 @@ export function Effects() {
             trigger: contentEl,
             start: "top 65%",
             once: true,
-            onEnter: () => void gsap.delayedCall(0.1, () => visualSwiper.slideNext()),
           },
         })
         .to(bgPath, { drawSVG: "165% 65%", ease: "power2.out", duration: 1.4 });
