@@ -88,11 +88,6 @@ export function ProjectsCarousel() {
             id="w-node-d56024cf-9b70-fc24-7ba0-e2b3ea8d1769-0ac01850"
             className="testimonial-slider"
           >
-            <h3 className="testimonial-heading">
-              Sites e landing pages desenvolvidos
-              <br />
-              com foco em conversão e autoridade
-            </h3>
             <div
               data-testimonial-inview=""
               className="testimonial-slider-wrapper"
