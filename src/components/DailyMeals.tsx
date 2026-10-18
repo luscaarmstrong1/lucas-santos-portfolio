@@ -181,17 +181,6 @@ export function DailyMeals() {
                             data-inertia-item-child=""
                           />
                         </div>
-                        <div
-                          data-inertia-item=""
-                          className="flavour-slide-pack is-second"
-                        >
-                          <img
-                            className="flavour-slide-pack-img"
-                            src={packImg}
-                            alt=""
-                            data-inertia-item-child=""
-                          />
-                        </div>
                       </div>
                     </div>
                   );

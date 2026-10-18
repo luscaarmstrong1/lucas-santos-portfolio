@@ -2118,7 +2118,7 @@ body.has-mobile-menu-open {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding: 0.25rem 1rem 0.6rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     max-width: 100%;
   }
   .flavour-layer-pills::-webkit-scrollbar {
@@ -2134,5 +2134,38 @@ body.has-mobile-menu-open {
   }
 }
 
+/* 17. Refinamento de Camadas: Espaçamento de Cabeçalho, Círculo na Frente e Hover do Hexágono */
+.flavour-header {
+  margin-bottom: 2rem !important;
+}
 
+.flavour-subline {
+  margin-bottom: 1.5rem !important;
+}
 
+.flavour-layer-pills {
+  margin-top: 1rem !important;
+  margin-bottom: 3.5rem !important;
+  position: relative !important;
+  z-index: 15 !important;
+}
+
+/* Círculo da arte em destaque na frente */
+.flavour-slide-dose {
+  position: relative !important;
+  z-index: 4 !important;
+}
+
+/* Único hexágono posicionado atrás, vem para a frente no hover */
+.flavour-slide-pack.is-first {
+  position: relative !important;
+  z-index: 2 !important;
+  cursor: pointer !important;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.1s ease, filter 0.3s ease !important;
+}
+
+.flavour-slide-pack.is-first:hover {
+  z-index: 10 !important;
+  transform: scale(1.08) translateY(-6px) !important;
+  filter: drop-shadow(0 16px 30px rgba(7, 24, 39, 0.45)) !important;
+}
