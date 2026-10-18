@@ -57,8 +57,8 @@ export function Comparison() {
               alt="Ambiente integrado de engenharia, dados e automação com fluxo de diagnóstico, modelagem, implementação e validação"
               className="img methodology-main-img"
               loading="lazy"
-              width={941}
-              height={1672}
+              width={1011}
+              height={2436}
             />
           </div>
           <div
